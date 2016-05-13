@@ -1,0 +1,47 @@
+<style>
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -70%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 13%;
+  min-height: 50%;
+}
+#tagore {
+  position: fixed; 
+  top: -50%; 
+  left: -30%; 
+  width: 200%; 
+  height: 200%;
+}
+#tagore img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 13%;
+  min-height: 50%;
+}
+
+</style>
+<div id="tagore">
+ <%= image_tag "/assets/tagore.jpeg",:id=>"about_image"%>
+</div>
+
+<div id="bg">
+
+ <%= image_tag "/assets/tagore_garden.jpeg",:id=>"about_image"%>
+
+  <!-- <img src="assets/images/tagore_garden.jpeg" alt=""> -->
+</div>
