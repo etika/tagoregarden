@@ -27,6 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 gem 'gmaps4rails'
 gem 'bootstrap-sass', '~> 3.3.1'
+group :assets do
+  gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
+end
 
 # gem 'gmaps4rails'
 # gem 'mapbox-rails'
