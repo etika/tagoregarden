@@ -1,80 +1,20 @@
-
-<style>
-/*#bg {
-  position: fixed; 
-  top: -50%; 
-  left: -70%; 
-  width: 200%; 
-  height: 200%;
-}
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 13%;
-  min-height: 50%;
-}
-#tagore {
-  position: fixed; 
-  top: -50%; 
-  left: -30%; 
-  width: 200%; 
-  height: 200%;
-}
-#tagore img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 13%;
-  min-height: 50%;
-}*/
-div.columns       { width: 1300px; }
-/*div.columns div   { width: 433.33px; height: 400px; float: left; }*/
-div.grey          { background-color: #cccccc; }
-div.red           { background-color: #e14e32; }
-div.clear         { clear: both; }
-</style>
-
-
 <div class="columns">
 <div   id="multi_markers" class="g_map" style='display:none;width: 800px; height: 800px;padding-right: 10px;float:left;'>
 </div> 
-<div style="color:black;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/hotel.jpeg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div  class="mapper box hotel">
 <center><i><h1>Hotels</h1><i> </center>
 </div>
 <div  style='display:none;width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
 
-<div style="color:black;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/doctor.jpg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div class="mapper box doctor">
+
 <!-- <center><i><h1>Doctors</h1><i> </center> -->
 </div>
 <div   id="multi_markers1" style='display:none;width: 380px; height: 300px;float: left;'>
 </div> 
-<div style="color:green;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/electrician.jpeg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div class="mapper box electrician">
+
 <center><i><h1>Electricians</h1><i> </center>
 </div>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
@@ -86,39 +26,24 @@ div.clear         { clear: both; }
 <div class="columns">
 <div   id="multi_markers3" style='display:none;width: 380px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
-<div style="color:red;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/chemist.jpg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div  class="mapper box chemist">
+
 <center><i><h1>Chemists</h1><i> </center>
 </div>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
 <div   id="multi_markers4" style='display:none;width: 380px; height: 300px;float: left;'>
 </div> 
-<div style="color:yellow;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/parlour.jpg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div  class="mapper box parlour">
+
 <center><i><h1>Beauty Parlour</h1><i> </center>
 </div>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
 <div   id="multi_markers5" style='display:none;width: 380px; height: 300px;float: left;'>
 </div>
-<div style="color:blue;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/tailor.png) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div class="mapper box tailor">
+
 <!-- <center><i><h1>Tailors</h1><i> </center>
  --></div> 
 </div>
@@ -126,42 +51,149 @@ div.clear         { clear: both; }
 <div class="columns">
 <div   id="multi_markers6" style='display:none;width: 380px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
-<div style="color:blue;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/grocery.jpeg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div  class="mapper box grocery">
 <center><i><h1>Grocery Shops</h1><i> </center>
 </div>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
 <div   id="multi_markers7" style='display:none;width: 380px; height: 300px;float: left;'>
 </div> 
-<div style="color:black;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/bank.jpeg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div class="mapper box bank">
 <center><i><h1>Banks</h1><i> </center>
 </div>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
 <div   id="multi_markers8" style='display:none;width: 380px; height: 300px;float: left;'>
 </div> 
-<div style="color:orange;width: 380px; height: 300px;padding-right: 10px;float:left;background: url(/assets/bakery.jpeg) center no-repeat;" class="mapper">
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<div class="mapper box bakeries">
 <center><i><h1>Bakeries</h1><i> </center>
 </div>
+<<!-- div class="mapper box photo_studios">
+<center><i><h1>Photo Studios</h1><i> </center>
 </div>
+<div class="mapper box hotspot">
+<center><i><h1>Hot Spots</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Mother Diaries and Milk Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Dry Cleaners</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Stationery Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Jewellers</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Clothing</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Phone Recharge and Accessories</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>PhotoCopy Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Opticals</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Juice Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Kid Schools</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Footwear Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Toys Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Parks</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Emergency Contacts</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Cosmetics</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Lawyers</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Gyms</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Govt Offices</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Atms</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Religious Places</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Plumbers</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Painters</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Gardners</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Cobblers</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Emergency Contacts</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Emergency Contacts</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Tutors</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Courier Services</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Tour Updates</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Tour Updates</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Home Cleaning Services</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Sanitary Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Welders</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Furniture Shops</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Welders</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Pricing Updates of services in your area</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Architects</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Software Developers</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Hardware Engineers</h1><i> </center>
+</div>
+<div class="mapper box hotspot">
+<center><i><h1>Sweet Shops</h1><i> </center>
+</div> -->
 <div class="clear"></div></br>
 <%= google_adsense_include_tag client: 'pub-1234', slot: '1234'%>
 
@@ -339,17 +371,3 @@ handler8.buildMap({ internal: {id: 'multi_markers8'}}, function(){
 });
 
 </script>
- <!-- only if you need custom infoboxes -->
-<!-- <div id="tagore"> -->
- <%#= image_tag "/assets/tagore.jpeg",:id=>"about_image"%>
-<!-- </div> -->
-
-<!-- <div id="bg"> -->
-
- <%#= image_tag "/assets/tagore_garden.jpeg",:id=>"about_image"%>
-
-  <!-- <img src="assets/images/tagore_garden.jpeg" alt=""> -->
-<!-- </div> -->
-<!-- <div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div> -->

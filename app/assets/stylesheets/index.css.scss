@@ -1,0 +1,16 @@
+div.columns       { width: 1300px; }
+/*div.columns div   { width: 433.33px; height: 400px; float: left; }*/
+div.grey          { background-color: #cccccc; }
+div.red           { background-color: #e14e32; }
+div.clear         { clear: both; }
+.box{color:black;width: 380px; height: 300px;padding-right: 10px;float:left}
+.hotel{background: url(/assets/hotel.jpeg) center no-repeat;}
+.doctor{background: url(/assets/doctor.jpg) center no-repeat;}
+.tailor{background: url(/assets/tailor.png) center no-repeat;}
+.electrician{background: url(/assets/electrician.jpeg) center no-repeat;}
+.chemist{background: url(/assets/chemist.jpg) center no-repeat;}
+.parlour{background: url(/assets/parlour.jpg) center no-repeat;}
+.grocery{background: url(/assets/grocery.jpeg) center no-repeat;}
+.bank{background: url(/assets/bank.jpeg) center no-repeat;}
+.bakeries{background: url(/assets/bakery.jpeg) center no-repeat; }
+.box h1{ position: relative;top:240px;}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tagoregarden</title>
+  <title>One Place for getting to know all about Tagoregarden</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,16 +12,102 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> 
 <script   src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-
-
+<%=favicon_link_tag 'favicon.ico'%>
 </head>
 
 
 <%= yield %>
+<hr>
+<style type="text/css">
+  ul li{
+    display: inline-block;
+    padding: 20px;
+  }
+
+/*-----Social Follow-----*/ 
+#follow{ 
+border: 2px solid #ACA3A3;
+padding: 0px 0px 0px 0px;
+overflow: hidden;
+display: inline-block;
+}
+#follow a{ 
+width:32px; 
+height:32px; 
+margin:0 0 0 2px; 
+display:block; 
+float:left; 
+background:url(http://i.imgur.com/ARnVpCd.png) no-repeat 0 0; 
+line-height:0; 
+font-size:0; 
+color:transparent 
+} 
+#follow a:hover{ 
+opacity:.5 
+} 
+#follow a.facebook{ 
+background-position:0 -105px; 
+margin-left:9px!important 
+} 
+#follow a.twitter{ 
+background-position:0 -70px 
+} 
+#follow a.gplus{ 
+background-position:0 -140px 
+} 
+#follow a.rss{ 
+background-position:0 -35px 
+} 
+#follow a.tube{ 
+background-position:0 0 
+} 
+</style> 
+
+<!--follow ends-->
 <footer class="footer h-footer">
       <div class="container">
+      <div class="row">
+              <ul class = "nav navbar-nav">
+              <li>
+              TAGORE GARDEN WALA
+              </li>
+              <li>
+              About Us
+              </li>
+              <li>
+              Contact Us
+              </li>
+              <li>
+              FAQs
+              </li>
+              <li>
+              Help Us
+              </li>
+              <li>
+              Forum
+              </li>
+              <li>
+              Queries
+              </li>
+              <li>
+              Suggestions
+              </li>
+              <div id="follow" style="width:250px;margin:0 auto; border:none!important;"> 
+<a class="facebook" href="https://www.facebook.com/iamshemul" rel="nofollow" title="Follow me on Facebook">Facebook</a> 
+<a class="twitter" href="http://twitter.com/shemul49rmc" rel="nofollow" title="Follow me on Twitter">Twitter</a> 
+<a class="gplus" href="http://plus.google.com/101611663127869024919" rel="nofollow" title="Follow me on Google Plus">Google Plus</a> 
+<a class="rss" href="http://feeds.feedburner.com/iamshemul" rel="nofollow" title="Subscribe To RSS">Subscribe To RSS</a> 
+<a class="tube" href="http://www.youtube.com/user/shemul49rmc" rel="nofollow" title="Follow me on YouTube">YouTube</a> 
+</div> 
+</li>
+              </ul>
+      </div>
         <div class="row">
-           &copy; 1995-2006 Tagore
+           &copy; 2016 Tagore Garden Wala
+                    <div class="pull-right">
+                    made with <%=image_tag("love.jpg", height: '32', width: '32')%>
+ in india
+                     </div>
         </div>
       </div>
 </footer>
