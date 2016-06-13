@@ -15,4 +15,5 @@
 //= require gmaps/google
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require jquery.countdown
 //= require_tree .
