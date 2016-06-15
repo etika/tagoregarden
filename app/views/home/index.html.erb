@@ -1,74 +1,74 @@
 <div class="columns">
-<div   id="multi_markers" class="g_map" style='display:none;width: 800px; height: 800px;padding-right: 10px;float:left;'>
-</div> 
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Hotel").id) do %>
 <div  class="mapper box hotel">
 <center><i><h1>Hotels</h1><i> </center>
 </div>
+<%end%>
 <div  style='display:none;width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
-
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Doctor").id) do %>
 <div class="mapper box doctor">
-
-<!-- <center><i><h1>Doctors</h1><i> </center> -->
 </div>
-<div   id="multi_markers1" style='display:none;width: 380px; height: 300px;float: left;'>
-</div> 
+<%end%>
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Electrician").id) do %>
+
 <div class="mapper box electrician">
 
 <center><i><h1>Electricians</h1><i> </center>
 </div>
+<%end%>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
-</div> 
-<div   id="multi_markers2" style='display:none;width: 380px; height: 300px;float: left;'>
 </div> 
 </div>
 <div class="clear"></div></br>
 <div class="columns">
-<div   id="multi_markers3" style='display:none;width: 380px; height: 300px;padding-right: 10px;float:left;'>
-</div> 
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Chemist").id) do %>
+
 <div  class="mapper box chemist">
 
 <center><i><h1>Chemists</h1><i> </center>
 </div>
+<%end%>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
-<div   id="multi_markers4" style='display:none;width: 380px; height: 300px;float: left;'>
-</div> 
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Parlour").id) do %>
+
 <div  class="mapper box parlour">
 
 <center><i><h1>Beauty Parlour</h1><i> </center>
 </div>
+<%end%>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
-<div   id="multi_markers5" style='display:none;width: 380px; height: 300px;float: left;'>
-</div>
-<div class="mapper box tailor">
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Tailor").id) do %>
 
-<!-- <center><i><h1>Tailors</h1><i> </center>
- --></div> 
+<div class="mapper box tailor">
 </div>
+<%end%> 
 <div class="clear"></div></br>
 <div class="columns">
-<div   id="multi_markers6" style='display:none;width: 380px; height: 300px;padding-right: 10px;float:left;'>
-</div> 
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Grocery").id) do %>
+
 <div  class="mapper box grocery">
 <center><i><h1>Grocery Shops</h1><i> </center>
 </div>
+<%end%>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
-<div   id="multi_markers7" style='display:none;width: 380px; height: 300px;float: left;'>
-</div> 
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Bank").id) do %>
+
 <div class="mapper box bank">
 <center><i><h1>Banks</h1><i> </center>
 </div>
+<%end%>
 <div  style='width: 8px; height: 300px;padding-right: 10px;float:left;'>
 </div> 
-<div   id="multi_markers8" style='display:none;width: 380px; height: 300px;float: left;'>
-</div> 
+<%= link_to map_display_path(:category=>Category.find_by_category_name("Bakery").id) do %>
 <div class="mapper box bakeries">
 <center><i><h1>Bakeries</h1><i> </center>
 </div>
-<!-- <div class="mapper box photo_studios">
+<%end%>
+<div class="mapper box photo_studios">
 <center><i><h1>Photo Studios</h1><i> </center>
 </div>
 <div class="mapper box hotspot">
@@ -193,181 +193,6 @@
 </div>
 <div class="mapper box hotspot">
 <center><i><h1>Sweet Shops</h1><i> </center>
-</div> -->
-<div class="clear"></div></br>
-<%= google_adsense_include_tag client: 'pub-1234', slot: '1234'%>
-
-
-
-<!-- <div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
-<div id="basic_map" style='width: 800px; height: 400px;'>
-</div> -->
-<!--<style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
-<div id='map' class='dark'></div>
-<div id='map'></div>
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiZXRpa2EiLCJhIjoiY2lvOGo1MW94MDMwdHcxa3FuZWQ5M3RtayJ9.ZvlXvIxAdqz1jAgvjNi2DA'
-;
-var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([40, -74.50], 9);
-</script>-->
-
-<script type="text/javascript">
-$( ".mapper" ).click(function() {
-alert( "Handler for .click() called." );
-$(this).hide();
-$(this).siblings(".g_map").show();
-
-});
-// handler = Gmaps.build('Google');
-// handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-//   markers = handler.addMarkers([
-//     {
-//       "lat": 0,
-//       "lng": 0,
-//       "picture": {
-//         "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-//         "width":  32,
-//         "height": 32
-//       },
-//       "infowindow": "hello!"
-//     }
-//   ]);
-//   handler.bounds.extendWith(markers);
-//   handler.fitMapToBounds();
-// });
-
-var handler = Gmaps.build('Google');
-handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
-  var markers = handler.addMarkers([
-    { lat: 43, lng: 3.5},
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5}
-  ]);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
-    
-
-var handler1 = Gmaps.build('Google');
-handler1.buildMap({ internal: {id: 'multi_markers1'}}, function(){
-  var markers = handler1.addMarkers([
-    { lat: 43, lng: 3.5 },
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5},
-     
-  ]);
-
-  handler1.bounds.extendWith(markers);
-  handler1.fitMapToBounds();
-});
-var icon = {
-    url: "/assets/images/tagore.jpeg",
-    size: new google.maps.Size(20, 20),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(0, 20)
-};
-var handler2 = Gmaps.build('Google');
-handler2.buildMap({ internal: {id: 'multi_markers2'}}, function(){
-  var markers = handler2.addMarkers([
-    { lat: 43, lng: 3.5,picture: icon},
-    { lat: 45, lng: 4,picture: icon},
-    { lat: 47, lng: 3.5,picture: icon},
-    { lat: 49, lng: 4,picture: icon},
-    { lat: 51, lng: 3.5,picture: icon}
-  ]);
-  handler2.bounds.extendWith(markers);
-  handler2.fitMapToBounds();
-});
-
-var handler3 = Gmaps.build('Google');
-handler3.buildMap({ internal: {id: 'multi_markers3'}}, function(){
-  var markers = handler3.addMarkers([
-    { lat: 43, lng: 3.5},
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5}
-  ]);
-  handler3.bounds.extendWith(markers);
-  handler3.fitMapToBounds();
-});
-
-var handler4 = Gmaps.build('Google');
-handler4.buildMap({ internal: {id: 'multi_markers4'}}, function(){
-  var markers = handler2.addMarkers([
-    { lat: 43, lng: 3.5},
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5}
-  ]);
-  handler4.bounds.extendWith(markers);
-  handler4.fitMapToBounds();
-});
-
-var handler5 = Gmaps.build('Google');
-handler5.buildMap({ internal: {id: 'multi_markers5'}}, function(){
-  var markers = handler5.addMarkers([
-    { lat: 43, lng: 3.5},
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5}
-  ]);
-  handler5.bounds.extendWith(markers);
-  handler5.fitMapToBounds();
-});
-
-var handler6 = Gmaps.build('Google');
-handler6.buildMap({ internal: {id: 'multi_markers6'}}, function(){
-  var markers = handler6.addMarkers([
-    { lat: 43, lng: 3.5},
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5}
-  ]);
-  handler6.bounds.extendWith(markers);
-  handler6.fitMapToBounds();
-});
-
-
-var handler7 = Gmaps.build('Google');
-handler7.buildMap({ internal: {id: 'multi_markers7'}}, function(){
-  var markers = handler7.addMarkers([
-    { lat: 43, lng: 3.5},
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5}
-  ]);
-  handler7.bounds.extendWith(markers);
-  handler7.fitMapToBounds();
-});
-
-
-
-var handler8 = Gmaps.build('Google');
-handler8.buildMap({ internal: {id: 'multi_markers8'}}, function(){
-  var markers = handler8.addMarkers([
-    { lat: 43, lng: 3.5},
-    { lat: 45, lng: 4},
-    { lat: 47, lng: 3.5},
-    { lat: 49, lng: 4},
-    { lat: 51, lng: 3.5}
-  ]);
-  handler8.bounds.extendWith(markers);
-  handler8.fitMapToBounds();
-});
-
-</script>
+<div class="clear"></div></br>
+<%#= google_adsense_include_tag client: 'pub-1234', slot: '1234'%>

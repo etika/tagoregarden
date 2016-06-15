@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @entry.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @entry.longitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @entry.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @entry.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @entry.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @entry.country %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @entry.pincode %>
+</p>
+
+<p>
+  <strong>Other details:</strong>
+  <%= @entry.other_details %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @entry.category_id %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @entry.owner_id %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

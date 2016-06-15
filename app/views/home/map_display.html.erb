@@ -1,0 +1,50 @@
+      <%= javascript_include_tag "oms.min"%>
+      <style type="text/css">
+.left-div {
+    float: left;
+    width: 900px;
+    height: 600px;
+    padding-right: 8px;
+}
+.right-div {
+    float: left;
+    margin-left: 108px;
+    background-color: yellow;
+}
+</style>
+<!-- style='width: 800px; height: 800px;padding-right: 10px;float:left;' -->
+<div   id="multi_markers" class="g_map left-div" >
+</div> 
+<div class="right-div">
+Reviews
+</div>
+<script type="text/javascript">
+var json_map=<%=@json_map.to_json.html_safe%>
+// var handler = Gmaps.build('Google');
+var handler = Gmaps.build('Google',
+        {markers:
+          {clusterer: {
+            gridSize: 40,
+            maxZoom: 10
+         
+          },
+          marker_spider:"true"
+        }}
+      );
+handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
+  var markers = handler.addMarkers(json_map);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+   // Create a OverlappingMarkerSpiderfier instance
+  var oms = new OverlappingMarkerSpiderfier(handler.getMap(), {
+    keepSpiderfied: true
+    // Other options you need
+  });
+
+  // Track each marker with OMS
+  _.each(markers, function(marker) {
+    oms.addMarker(marker.getServiceObject());
+  });
+});
+
+    </script>
