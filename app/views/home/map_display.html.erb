@@ -1,21 +1,25 @@
       <%= javascript_include_tag "oms.min"%>
       <style type="text/css">
 .left-div {
-    float: left;
-    width: 900px;
-    height: 600px;
-    padding-right: 8px;
+    /*float: left;*/
+    max-width:100em;
+    width: 50em;
+    height: 45em;
+    top:0;
+    /*padding-right: 8px;*/
 }
 .right-div {
     /*float: left;*/
-    margin-left: 108px;
+    margin-left: 2em;
     background-color: yellow;
 }
 </style>
 <!-- style='width: 800px; height: 800px;padding-right: 10px;float:left;' -->
-<div   id="multi_markers" class="g_map left-div" >
+<div class="container">
+<div class="row">
+<div   id="multi_markers" class="g_map left-div col-lg-8" >
 </div> 
-<div class="right-div">
+<div class="right-div col-lg-4">
 <h1><%=@category.titleize%> in Tagore Garden Area </h1></br>
 <%i=0%>
 <% @entries.each do |entry| -%>
@@ -27,7 +31,8 @@
     </li>
     <%i=i+1%>
 <% end -%>
-
+</div>
+</div>
 </div>
 <div class="container">
   <!-- Trigger the modal with a button -->
@@ -66,7 +71,6 @@ $( document ).ready(function() {
   path:  '/assets/',
 
 });
-  alert("kjkjkj")
 var json_map=<%=@json_map.to_json.html_safe%>
 // var handler = Gmaps.build('Google');
 var handler = Gmaps.build('Google',
