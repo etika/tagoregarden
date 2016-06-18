@@ -28,6 +28,7 @@ gem 'gmaps4rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'jquery-countdown-rails'
 gem 'meta-tags'
+gem 'devise'
 
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'

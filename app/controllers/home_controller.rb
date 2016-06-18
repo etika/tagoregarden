@@ -18,7 +18,7 @@ class HomeController < ApplicationController
 
   def map_display
     @entries = Category.find(params[:category]).entries
-    category = Category.find(params[:category]).category_name.downcase
+    @category = Category.find(params[:category]).category_name.downcase
     @json_map=[]
     @entries.each do |e|
       @json_map << {lat: e.latitude,lng: e.longitude, infowindow: e.other_details,

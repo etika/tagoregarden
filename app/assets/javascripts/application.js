@@ -12,8 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.raty
 //= require gmaps/google
+//= require oms.min
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require jquery.countdown
-//= require_tree .
