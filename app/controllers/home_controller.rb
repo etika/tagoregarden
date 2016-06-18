@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   end
 
   def map_display
-    @entries = Category.find(params[:category]).entries.paginate(:page => params[:page], :per_page => 2)
+    @entries = Category.find(params[:category]).entries.paginate(:page => params[:page], :per_page => 4)
     @category = Category.find(params[:category]).category_name.downcase
     @json_map=[]
     @entries.each do |e|
