@@ -81,6 +81,8 @@
   
 </div>
 <script type="text/javascript">
+// $("#multi_markers").on( "pageshow", function() {
+
 $( document ).ready(function() {
   $('.fixed').raty({
   readOnly:  true,
@@ -96,9 +98,10 @@ var handler = Gmaps.build('Google',
         {markers:
           {clusterer: {
             gridSize: 40,
-            // maxZoom: 10
+            maxZoom: 10
             // minZoom
-            Zoom: 8
+            // Zoom: 0,
+
          
           },
           marker_spider:"true"
