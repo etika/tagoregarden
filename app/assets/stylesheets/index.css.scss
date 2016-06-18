@@ -5,7 +5,7 @@ div.red           { background-color: #e14e32; }
 div.clear         { clear: both; }
 .box{color:black;width: 380px; height: 300px;padding-right: 10px;float:left}
 .hotel{background: url(/assets/hotel.jpeg) center no-repeat;}
-.doctor{background: url(/assets/doctor.jpg) center no-repeat;}
+.doctor{background: url(/assets/doctor.png) center no-repeat;}
 .tailor{background: url(/assets/tailor.png) center no-repeat;}
 .electrician{background: url(/assets/electrician.jpeg) center no-repeat;}
 .chemist{background: url(/assets/chemist.jpg) center no-repeat;}
@@ -14,3 +14,8 @@ div.clear         { clear: both; }
 .bank{background: url(/assets/bank.jpeg) center no-repeat;}
 .bakeries{background: url(/assets/bakery.jpeg) center no-repeat; }
 .box h1{ position: relative;top:240px;}
+@media (min-width: 768px) and (max-width: 1280px) {
+.box{color:black;width: 150px; height: 200px;padding-right: 15px;float:left}
+.box h1{ position: relative;top:190px;font-size:13px;font-weight:bold;}
+
+}
