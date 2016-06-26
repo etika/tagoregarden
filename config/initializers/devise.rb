@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '1b874565de4bf6be6fdbb3a1871c648e884d5ff3768ec63d10f56ff775508b5c1c4312c396b44fa9868b60c47c7a12f7914ee7748a7d40193bba1966ed863478'
+  # config.secret_key = 'db0ca3c3c51c7674e8d845260344650493fa59cd427dfde89dd96c57d162c207f8d62e152b895bd946d3e5279cc517fd784de46ceaa9478d5522e2b830b196af'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -24,6 +24,8 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
+  config.http_authenticatable_on_xhr = false
+config.navigational_formats = ["*/*", :html, :json]
   require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
@@ -102,7 +104,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '84a9af6523688c9ddd8ec785f627a8678f6a40793fd490d50e6d737b64006aa8598b93b55d404fcba5ffc726e8e9f46bc84858043c7e1c90e2d5b6496a4430a7'
+  # config.pepper = '44c15e7931022faafaa571f80c92afcdea7fdea85938abb18776f81a4edf1c784169881d795ad9d680a140b759e9ba1f837773d10db65c7531eebe5f5c41439a'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -265,4 +267,9 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+    require "omniauth-facebook"
+  config.omniauth :facebook,'197118224018185','efff43ace1aa2654af5c118abb3cc187', scope: 'email'
+require 'omniauth-google-oauth2'
+  config.omniauth :google_oauth2, "596987185555-nc293iqavg8u6bfhsajn60oa7k94e35v.apps.googleusercontent.com", "z541M7Kon8XMmkR7qtRhn1QE"
+
 end

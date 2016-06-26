@@ -30,7 +30,13 @@ gem 'jquery-countdown-rails'
 gem 'meta-tags'
 gem 'devise'
 gem 'will_paginate'
-
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem "omniauth-google-oauth2"
+gem "rails_best_practices"
+gem 'rspec-rails', '~> 3.0.0'
+# gem 'metrical', :require => false
+# gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
 
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'

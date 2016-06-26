@@ -1,0 +1,8 @@
+<nav class="navbar navbar-inverse">
+  ...<h5>Tagore Garden Wala </h5>
+  <%if user_signed_in? %>
+   <%= link_to  destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
+    <i class="fa fa-power-off fa-fw"></i> Logout
+  <% end %>
+<% end %>
+</nav>

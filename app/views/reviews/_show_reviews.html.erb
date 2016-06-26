@@ -1,0 +1,19 @@
+
+ <% if reviews.present?%>
+        <%reviews.each do |r|%>
+  Content</br>
+  <%=r.content%></br>
+  Rating</br>
+<div class="fixed" data-score=<%=r.rating%>></div>
+        <%end%>
+
+<%end%>
+<script type="text/javascript">
+$('.fixed').raty({
+  readOnly : true,
+  score: function() {
+    return $(this).attr('data-score');
+  },
+      path:  '/assets/'
+
+});</script>

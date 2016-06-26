@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign in to Complete Your Review</h4>
+        </div>
+        <div class="modal-body">
+          <p><%= link_to(image_tag("fb.png", :alt => "home image", :width =>200, :height => 50, :title => "Login via Facebook"), user_facebook_omniauth_authorize_path) %></br>
+          <%= link_to(image_tag("google.png", :alt => "home image", :width =>200, :height => 50, :title => "Login via Google Plus"),user_google_oauth2_omniauth_authorize_path) %></br>
+        </div>
+        <div class="modal-footer" >
+           <div style="float:left">Or use Your Email Address</div></br>
+            <%=link_to "Log In","#",data:{toggle:"modal",target:"#myModal4"},style: 'float:left',:class=>"log_in"%>
+            <%=link_to "Sign Up","#",data:{toggle:"modal",target:"#myModal3"},style: 'float:left',class:"sign_up"%>
+            </p>      
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  
+</div>

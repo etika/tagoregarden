@@ -1,20 +1,26 @@
 Rails.application.routes.draw do
-  resources :users
+
+  post 'reviews/create'
+  get 'reviews/show'
   resources :entries
   resources :categories
   resources :owners
   get 'home/index'
-  get 'coming_soon'=>'home#coming_soon'
-  get 'about_us'=>'home#about_us'
-  get 'contact_us'=>'home#contact_us'
+  get 'coming-soon'=>'home#coming_soon'
+  get 'about-us'=>'home#about_us'
+  get 'contact-us'=>'home#contact_us'
   get 'faq'=>'home#faq'
-  get 'map_display'=>'home#map_display'
+  get 'map-display'=>'home#map_display'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#coming_soon'
+   devise_for :users, :controllers => { :registrations => 'registrations' ,:omniauth_callbacks => "omniauth_callbacks",:sessions => 'sessions',confirmations: 'confirmations',:passwords => "passwords"}
+# get 'users/auth/:provider/callback', to: 'sessions#create'
+
+
 
 
   # Example of regular route:

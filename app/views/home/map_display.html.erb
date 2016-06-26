@@ -1,108 +1,45 @@
-      <%= javascript_include_tag "oms.min"%>
-      <style type="text/css">
-.left-div {
-    /*float: left;*/
-    /*max-width:100em;*/
-    width: 50em;
-    height: 45em;
-    top:0;
-    /*padding-right: 8px;*/
-}
-.right-div {
-    /*float: left;*/
-    margin-left: 2em;
-    background-color: yellow;
-}
-@media (max-width: 768px) {
-.left-div {
-    /*float: left;*/
-    /*max-width:100em;*/
-    width: 25em;
-    height: 25em;
-    top:0;
-    /*padding-right: 8px;*/
-}
-.right-div {
-    /*float: left;*/
-    margin-left: 1em;
-    height: auto;
-    width: 25em;
-    background-color: yellow;
-}
-}
-</style>
-<!-- style='width: 800px; height: 800px;padding-right: 10px;float:left;' -->
+ <%= javascript_include_tag "oms.min"%>
+ <%= stylesheet_link_tag  'map_display' %>
+ <%= javascript_include_tag "map_display"%>
+
 <div class="container">
 <div class="row">
 <div   id="multi_markers" class="g_map left-div col-lg-8" >
 </div> 
 <div class="right-div col-lg-4">
-<h1><%=@category.titleize%> in Tagore Garden Area </h1></br>
-<%i=0%>
+<h1><%=@category.titleize.pluralize%> in Tagore Garden Area </h1></br>
 <% @entries.each do |entry| -%>
     <li>
-       <%= entry.other_details %> <%= entry.address %>,contact <%=entry.owner.owner_name%> <%=entry.owner.phone_number%></br>  
-       Rating:<div class="fixed" data-score=<%=i%>></div>
-       <%=link_to "Show Reviews","#" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <%=link_to "Add Reviews","#",data:{toggle:"modal",target:"#myModal"} %>
+       <%= entry.other_details %> <%= entry.address %>,contact <%=entry.owner_owner_name%> <%=entry.owner_phone_number%></br>  
+       Rating:<div class="fixed" data-score=<%=entry.avg_rating%>></div>
+       <%=link_to "Show Reviews","#",data:{entry:entry.id},class:"show_reviews"%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <%if user_signed_in?%>
+          <%=link_to "Add Reviews","#",data:{toggle:"modal",target:"#myModal1",entry:entry.id},:class=>"add_review"%>
+       <%else%>
+          <%=link_to "Add Reviews","#",data:{toggle:"modal",target:"#myModal"} %>
+       <%end%>
     </li>
-    <%i=i+1%>
 <% end -%>
 <%= will_paginate @entries %>
-
 </div>
 </div>
 </div>
-<div class="container">
-  <!-- Trigger the modal with a button -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sign in to Complete Your Review</h4>
-        </div>
-        <div class="modal-body">
-          <p><%= link_to(image_tag("fb.png", :alt => "home image", :width =>200, :height => 50, :title => "Login via Facebook")) %></br>
-          <%= link_to(image_tag("google.png", :alt => "home image", :width =>200, :height => 50, :title => "Login via Google Plus")) %></br>
-        </div>
-        <div class="modal-footer" >
-           <div style="float:left">Or use Your Email Address</div></br>
-          <button type="button" class="btn btn-default" style="float:left;">Login </button> <button type="button" class="btn btn-default" style="float:left;">SignUp</button>
-          </p>        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
+<%= render "shared/add_reviews",:locals => { :review =>Review.new } %>
+<%= render "shared/reviews"%>
+<%= render "shared/signup"%>
+<%= render "shared/login"%>
+<%= render "shared/fb_google_plus"%>
 <script type="text/javascript">
-// $("#multi_markers").on( "pageshow", function() {
-
-$( document ).ready(function() {
-  $('.fixed').raty({
-  readOnly:  true,
-  score:  function() {
-            return $(this).attr('data-score')
-        },
-  path:  '/assets/',
-
-});
-var json_map=<%=@json_map.to_json.html_safe%>
-// var handler = Gmaps.build('Google');
-var handler = Gmaps.build('Google',
+  $(document).ready(function(){
+  var json_map=<%=@json_map.to_json.html_safe%>
+  var handler = Gmaps.build('Google',
         {markers:
           {clusterer: {
             gridSize: 40,
             maxZoom: 10
             // minZoom
             // Zoom: 0,
-
-         
+       
           },
           marker_spider:"true"
         }}
@@ -123,4 +60,6 @@ handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
   });
 });
 });
-    </script>
+</script>
+
+
