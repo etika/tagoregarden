@@ -9,7 +9,9 @@
         </div>
         <div class="modal-body s_review">
           Show Reviews
+          <% if @reviews.present?%>
        <%= render "reviews/show_reviews", :locals => {reviews:@reviews}%>
+        <%end%>
         </div>
         <div class="modal-footer" >
           </div>
