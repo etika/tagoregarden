@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :entries
   resources :categories
   resources :owners
-  get 'home/index'
+  get 'home'=>'home#index'
   get 'coming-soon'=>'home#coming_soon'
   get 'about-us'=>'home#about_us'
   get 'contact-us'=>'home#contact_us'
