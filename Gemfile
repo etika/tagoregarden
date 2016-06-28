@@ -34,7 +34,6 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem "rails_best_practices"
-gem 'rspec-rails', '~> 3.0.0'
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
 
@@ -57,6 +56,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0.0'
+
 end
 group :production do
   gem 'pg'
