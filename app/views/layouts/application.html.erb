@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>One Place for getting to know all about Tagoregarden</title>
+   <title><%= yield(:title) || "Welcome to Tagore Garden Wala " || "One Place for getting to know all about Tagoregarden" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= display_meta_tags %>

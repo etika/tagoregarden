@@ -1,19 +1,31 @@
 class HomeController < ApplicationController
   def index
+      set_meta_tags title: "Tagore Garden Wala |One place for All about tagore garden",
+                keywords: "tagore garden wala,tagore garden,tagore,garden",
+                description: "Coming Soon,to know all about tagore garden "
   end
   def coming_soon
-     set_meta_tags title: "Tagore Garden Wala",
+     set_meta_tags title: "Tagore Garden Wala |One place for All about tagore garden",
                 keywords: "tagore garden wala,tagore garden,tagore,garden",
-                description: "Coming Soon,tagore garden wala,tagore garden,tagore,garden"
+                description: "Coming Soon,to know all about tagore garden "
   end
   def about_us
+      set_meta_tags title: "Tagore Garden Wala |About Us",
+                keywords: "tagore garden wala,tagore garden,tagore,garden,about us",
+                description: "A group of people trying to make life simple at tagore garden "
 
   end
 
   def contact_us
+      set_meta_tags title: "Tagore Garden Wala |Contact Us",
+                keywords: "tagore garden wala,tagore garden,tagore,garden,contact us",
+                description: "Contact Us tagoregardenwala@gmail.com` "
   end
 
   def faq
+      set_meta_tags title: "Tagore Garden Wala |FAQ",
+                keywords: "tagore garden wala,tagore garden,tagore,garden,faq",
+                description: "Frequently asked Questions "
   end
 
   def map_display
