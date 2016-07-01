@@ -1,10 +1,11 @@
-
  <% if reviews.present?%>
         <%reviews.each do |r|%>
-  Content</br>
+  Review</br>
   <%=r.content%></br>
   Rating</br>
 <div class="fixed" data-score=<%=r.rating%>></div>
+    <%= social_share_button_tag(r.content) %>
+
         <%end%>
 
 <%end%>

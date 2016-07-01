@@ -36,6 +36,7 @@ gem "omniauth-google-oauth2"
 gem "rails_best_practices"
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
+gem 'social-share-button'
 
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'

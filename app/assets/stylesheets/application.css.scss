@@ -12,9 +12,12 @@
  *= require home
  *= require index
  *= require jquery.countdown
+ *= require social-share-button
  *= require_tree .
  *= require_self
  */
+ @import "social-share-button";
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
   ul li{

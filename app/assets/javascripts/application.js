@@ -15,6 +15,7 @@
 //= require jquery.raty
 //= require gmaps/google
 //= require oms.min
+//= require social-share-button
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require jquery.countdown

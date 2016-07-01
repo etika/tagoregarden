@@ -4,14 +4,18 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sign in to Complete Your Review</h4>
+          <% if user_signed_in?%>
+             <h4 class="modal-title">Add Review</h4>
+          <%else%>
+            <h4 class="modal-title">Sign in to Complete Your Review</h4>
+          <%end%>
         </div>
         <div class="modal-body">
-          Add Review
+        Fill in the Review
           <%@review= Review.new%>
           <%= form_for @review , :as => :review, :url => "/reviews/create",:remote=>true do |f| %>
-            <%=f.label  :content%>
-            <%=f.text_area :content %>
+            <%=f.label  :content%></br>
+            <%=f.text_area :content , cols: "50", rows: "10"%>
             <%=f.hidden_field :user_id,:value=>current_user.present? ? current_user.id : " "%>
             <%=f.hidden_field :entry_id,:value=>""%></br>
             <%=f.label :rating%>

@@ -6,6 +6,6 @@ class Entry < ActiveRecord::Base
 
   def avg_rating
      rating= self.reviews.sum(:rating)
-    avg_rating=(rating/self.reviews.count)
+    avg_rating=(rating/self.reviews.count) rescue nil
   end
 end
