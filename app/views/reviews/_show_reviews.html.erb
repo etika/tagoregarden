@@ -4,7 +4,7 @@
   <%=r.content%></br>
   Rating</br>
 <div class="fixed" data-score=<%=r.rating%>></div>
-    <%= social_share_button_tag(r.content) %>
+    <%= social_share_button_tag(r.content,desc:"#{r.content}",:image=>asset_path("hotel.jpeg", image)) %>
 
         <%end%>
 
