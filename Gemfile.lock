@@ -67,6 +67,8 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
+    contact_us (1.0.1)
+      rails (>= 4.2.0)
     debug_inspector (0.0.2)
     devise (4.1.1)
       bcrypt (~> 3.0)
@@ -208,6 +210,9 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     sexp_processor (4.7.0)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     social-share-button (0.3.1)
       coffee-rails
       sass-rails
@@ -246,6 +251,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.1)
   byebug
   coffee-rails (~> 4.1.0)
+  contact_us (~> 1.0.1)
   devise
   gmaps4rails
   jbuilder (~> 2.0)
@@ -263,6 +269,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simple_form
   social-share-button
   spring
   sqlite3

@@ -1,0 +1,40 @@
+<style type="text/css">
+  input[type="text"] {
+    /*width:100px;*/
+  /*height:30px;*/
+  /*border-radius:5px;*/
+/*  background-color: lightblue;
+*/  margin-left:2px;
+  position:relative;
+}
+
+label{
+position:relative;
+width:200px;
+border:2px  black;
+margin:20px;
+padding:5px;
+font-family:AR CENA;
+font-size:20px;
+
+}
+</style>
+<div class="container flash-container">
+  <div class="content flashes_msg">
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == :notice ? 'success' : 'error' %> alert fade in" style="float:left;width:100%;">
+        <a class="close" data-dismiss="alert">&#215;</a>
+        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+      </div>
+    <% end %>
+  </div>
+  <% flash.clear %>
+</div>
+<h2><%= t('.contact_us') %></h2>
+<%= simple_form_for @contact, :url => contacts_path do |f| %>
+  <%= f.input :name, :label => t('.name') if ContactUs.require_name %>
+  <%= f.input :email, :label => t('.email') %>
+  <%= f.input :subject, :label => t('.subject') if ContactUs.require_subject %>
+  <%= f.input :message, :as => :text, :label => t('.message') %>
+  <%= f.button :submit, :value => t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit') %>
+<% end %>
