@@ -6,7 +6,8 @@
 <div class="fixed" data-score=<%=r.rating%>></div>
     <%#= social_share_button_tag(r.content,desc:"#{r.content}",:image=>asset_path("hotel.jpeg", image),'data-facebook-title' => 'TheTitleForFacebook') %>
 <%#= social_share_button_tag(r.content, :rel => "twipsy") %>
-<%= social_share_button_tag(r.content, :url => "http://tagoregardenwala.co.in/home", :image => "http://www.etonline.com/news/2014/11/24116153/set_barbie_640.jpg", desc: "The summary of page", via: "MyTwitterName",'data-facebook-title' => 'TheTitleForFBB') %>
+<%#= social_share_button_tag(r.content, :url => "http://wwww.tagoregardenwala.co.in/home", :image => "http://www.etonline.com/news/2014/11/24116153/set_barbie_640.jpg", desc: "The summary of page", via: "MyTwitterName",'data-facebook-title' => 'TheTitleForFBB') %>
+<%= social_share_button_tag(r.content, 'data-facebook-title' => 'TheTitleForTwitter') %>
 
         <%end%>
 
