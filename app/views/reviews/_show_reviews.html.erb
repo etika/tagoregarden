@@ -8,8 +8,8 @@
 <%#= social_share_button_tag(r.content, :rel => "twipsy") %>
 <%#= social_share_button_tag(r.content, :url => "http://wwww.tagoregardenwala.co.in/home", :image => "http://www.etonline.com/news/2014/11/24116153/set_barbie_640.jpg", desc: "The summary of page", via: "MyTwitterName",'data-facebook-title' => 'TheTitleForFBB') %>
 <%= social_share_button_tag(r.content, 'data-facebook-title' => 'TheTitleForTwitter') %>
-<div class="follow">
-<a href=" http://www.facebook.com/sharer.php?s=100&p[title]='Review For #{r.entry.other_details}%21&p[url]=http://www.tagoregardenwala.co.in/&p[summary]=#{r.content}&p[images][0]=#{asset_path('hotel.jpeg')" class="facebook">Facebook</a>
+<div id="follow">
+<a href=" http://www.facebook.com/sharer.php?s=100&p[title]='Review For #{r.entry.other_details}'%21&p[url]=http://www.tagoregardenwala.co.in/&p[summary]=#{r.content}&p[images][0]='/assets/hotel.jpeg" class="facebook">Facebook</a>
 </div>
         <%end%>
 
