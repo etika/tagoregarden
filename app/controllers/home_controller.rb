@@ -29,11 +29,6 @@ class HomeController < ApplicationController
   end
 
   def map_display
-  set_meta_tags title: "Reviews about Everything",
-                keywords: "tagore garden wala,tagore garden,tagore,garden,about us",
-                description: "Reviews about all the hotels in your tagoregarden ",
-                image: "http://www.chateau-fort-sedan.fr/ressources/images/hotel/hotel_bar.jpg"
-
     @entries = Category.find(params[:category]).entries.paginate(:page => params[:page], :per_page => 4)
     @category = Category.find(params[:category]).category_name.downcase
     @json_map=[]
