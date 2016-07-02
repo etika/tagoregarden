@@ -4,9 +4,9 @@
   <%=r.content%></br>
   Rating</br>
 <div class="fixed" data-score=<%=r.rating%>></div>
-    <%= social_share_button_tag(r.content,desc:"#{r.content}",:image=>asset_path("hotel.jpeg", image),'data-facebook-title' => 'TheTitleForFacebook') %>
-<%= social_share_button_tag(r.content, :rel => "twipsy") %>
-<%= social_share_button_tag(r.content, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page", via: "MyTwitterName") %>
+    <%#= social_share_button_tag(r.content,desc:"#{r.content}",:image=>asset_path("hotel.jpeg", image),'data-facebook-title' => 'TheTitleForFacebook') %>
+<%#= social_share_button_tag(r.content, :rel => "twipsy") %>
+<%= social_share_button_tag(r.content, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page", via: "MyTwitterName",'data-facebook-title' => 'TheTitleForFBB') %>
 
         <%end%>
 
