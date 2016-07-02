@@ -9,7 +9,15 @@
 <%#= social_share_button_tag(r.content, :url => "http://wwww.tagoregardenwala.co.in/home", :image => "http://www.etonline.com/news/2014/11/24116153/set_barbie_640.jpg", desc: "The summary of page", via: "MyTwitterName",'data-facebook-title' => 'TheTitleForFBB') %>
 <%= social_share_button_tag(r.content, 'data-facebook-title' => 'TheTitleForTwitter') %>
 <div id="follow">
-<a href="http://www.facebook.com/sharer.php?s=100&p[title]='Review For #{r.entry.other_details}'%21&p[url]=http://www.tagoregardenwala.co.in/&p[summary]=#{r.content}&p[images][0]=http://www.chateau-fort-sedan.fr/ressources/images/hotel/hotel_bar.jpg" class="facebook">Facebook</a>
+var link=  http://www.facebook.com/dialog/feed?app_id=[FACEBOOK_APP_ID]' +
+        '&link=[FULLY_QUALIFIED_LINK_TO_SHARE_CONTENT]' +
+        '&picture=[LINK_TO_IMAGE]' +
+        '&name=' + encodeURIComponent('[CONTENT_TITLE]') +
+        '&caption=' + encodeURIComponent('[CONTENT_CAPTION]) +
+        '&description=' + encodeURIComponent('[CONTENT_DESCRIPTION]') +
+        '&redirect_uri=' + FBVars.baseURL + '[URL_TO_REDIRECT_TO_AFTER_SHARE]' +
+        '&display=popup';
+<a href="http://www.facebook.com/sharer.php?s=100&p[title]='Review For'"+ encodeURIComponent("#{r.entry.other_details}")+'&p[url]=http://www.tagoregardenwala.co.in/&p[summary]='+encodeURIComponent("#{r.content}")+'&p[images][0]='+encodeURIComponent("http://www.chateau-fort-sedan.fr/ressources/images/hotel/hotel_bar.jpg") class="facebook">Facebook</a>
 </div>
         <%end%>
 
