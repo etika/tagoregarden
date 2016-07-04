@@ -39,6 +39,7 @@ gem "rails_best_practices"
 gem 'social-share-button'
 gem 'contact_us', '~> 1.0.1'
 gem 'simple_form'
+gem "figaro"
 
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
