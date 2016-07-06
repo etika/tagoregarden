@@ -1,6 +1,6 @@
 <h1>Editing Category</h1>
 
-<%= render 'form',:locals => { :category => @category } %>
+<%= render :partial=> 'form',:locals => { :category => @category } %>
 
 <%= link_to 'Show', @category %> |
 <%= link_to 'Back', categories_path %>

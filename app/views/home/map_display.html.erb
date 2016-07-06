@@ -79,8 +79,15 @@ handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
      $("#review_entry_id").attr("value",entry_id)
   });
 
-$(document).on('click','.log_in ,.sign_up',function(){
+$(document).on('click','.log_in',function(){
     $("#myModal").modal('hide')
+    $("#myModal4").modal('show')
+
+ });
+
+$(document).on('click','.sign_up',function(){
+    $("#myModal").modal('hide')
+    $("#myModal3").modal('show')
 
  });
 

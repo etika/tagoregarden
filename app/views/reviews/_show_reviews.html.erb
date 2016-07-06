@@ -1,24 +1,13 @@
- <% if reviews.present?%>
-        <%reviews.each do |r|%>
-  Review</br>
-  <%=r.content%></br>
-  Rating</br>
-<div class="fixed" data-score=<%=r.rating%>></div>
-<script type="text/javascript">
-var link= "http://www.facebook.com/sharer.php?s=100&p[title]=Review For"+"<%=r.entry.other_details%>"+'&p[url]=http://www.tagoregardenwala.co.in/map-display?category=1#&p[summary]='+"<%=r.content%>"+'&p[images][0]='+"http://www.chateau-fort-sedan.fr/ressources/images/hotel/hotel_bar.jpg"
-$("a.link").attr('href',link)
-</script>
-
-    <%#= social_share_button_tag(r.content,desc:"#{r.content}",:image=>asset_path("hotel.jpeg", image),'data-facebook-title' => 'TheTitleForFacebook') %>
-<%#= social_share_button_tag(r.content, :rel => "twipsy") %>
-<%#= social_share_button_tag(r.content, :url => "http://wwww.tagoregardenwala.co.in/home", :image => "http://www.etonline.com/news/2014/11/24116153/set_barbie_640.jpg", desc: "The summary of page", via: "MyTwitterName",'data-facebook-title' => 'TheTitleForFBB') %>
-<%= social_share_button_tag(r.content, 'data-facebook-title' => 'TheTitleForTwitter') %>
-<div id="follow">
-<a class="facebook link">Facebook</a>
-</div>
-        <%end%>
-
-<%end%>
+  <% if reviews.present?%>
+    <%reviews.each do |r|%>
+      Review</br>
+      <%=r.content%></br>
+      Rating</br>
+      <div class="fixed" data-score=<%=r.rating%>></div>
+      <%= social_share_button_tag(r.content, 'data-facebook-title' => 'TheTitleForTwitter') %>
+    <%end%>
+  <%end%>
+  
 <script type="text/javascript">
 $('.fixed').raty({
   readOnly : true,
