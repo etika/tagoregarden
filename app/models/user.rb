@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :reviews
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable
+  has_and_belongs_to_many :roles
   def self.from_omniauth(auth)
     data = auth.info
     user = User.where(:email => data.email).first rescue nil
@@ -15,5 +16,8 @@ class User < ActiveRecord::Base
       user.save!(validate: false)
     end
     user
+  end
+   def is?(role)
+    return !!self.roles.find_by_name(role.to_s.camelize)
   end
 end
