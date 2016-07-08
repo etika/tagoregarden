@@ -4,5 +4,8 @@
    <%= link_to  destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
     <i class="fa fa-power-off fa-fw"></i> Logout
   <% end %>
+  <%else%>
+    <%= link_to('Register', new_user_registration_path)  %>
+
 <% end %>
 </nav>

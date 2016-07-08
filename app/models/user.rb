@@ -5,6 +5,19 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable
   has_and_belongs_to_many :roles
+  attr_accessor :full_name
+
+  # Getter
+  def full_name
+    [first_name, last_name].join(' ')
+  end
+
+  # Setter
+  def full_name=(name)
+    split = name.split(' ', 2)
+    self.first_name = split.first
+    self.last_name = split.last
+  end
   def self.from_omniauth(auth)
     data = auth.info
     user = User.where(:email => data.email).first rescue nil

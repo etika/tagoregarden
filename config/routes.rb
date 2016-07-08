@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'reviews/show'
   resources :entries
   resources :categories
-  resources :owners
   get 'home'=>'home#index'
   get 'coming-soon'=>'home#coming_soon'
   get 'about-us'=>'home#about_us'
