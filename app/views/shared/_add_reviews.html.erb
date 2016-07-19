@@ -22,7 +22,7 @@
             <div class="add_rating">
             </div>
             <%=f.hidden_field :rating%>
-            <%=f.submit "Submit"%>
+            <%=f.submit "Submit", data: {disable_with: 'Please wait...'}%>
           <%end%>
         </div>
         <div class="modal-footer" >

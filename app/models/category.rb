@@ -3,4 +3,5 @@ class Category < ActiveRecord::Base
   # def to_param
   #   "#{id} #{category_name}".parameterize
   # end
+  validates_presence_of :category_name
 end

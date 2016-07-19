@@ -34,6 +34,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem "rails_best_practices"
+gem "paperclip", "~> 5.0.0"
+
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
 gem 'social-share-button'
@@ -60,14 +62,23 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 3.0.0'
   gem 'quiet_assets'
-
+  gem 'rspec-rails', '~> 3.0.0'
 end
 group :production do
   gem 'pg'
 end
-
+group :test do
+  gem 'factory_girl_rails'
+  gem 'guard-rspec', require: false
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov', require: false
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'simplecov-rcov', :require => false
+  gem 'capybara'
+  gem 'selenium-webdriver'
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

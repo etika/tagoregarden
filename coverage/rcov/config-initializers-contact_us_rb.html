@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>config/initializers/contact_us.rb</title>
+    <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <script type="text/javascript" src="./assets/0.2.3/rcov.js"></script>
+  </head>
+  <body>
+    <h1>Tagoregarden C0 Coverage Information - Simploco - RCov</h1>
+    <h2>config/initializers/contact_us.rb</h2>
+
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left_align"><a href="config-initializers-contact_us_rb.html">config/initializers/contact_us.rb</a></td>
+            <td class='right_align'><tt>30</tt></td>
+            <td class='right_align'><tt>6</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Key</h3>
+
+    <div class="key"><pre><span class='marked'>Code reported as executed by Ruby looks like this...</span><span class='marked1'>and this: this line is also marked as covered.</span><span class='inferred'>Lines considered as run by rcov, but not reported by Ruby, look like this,</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).</span><span class='uncovered'>Finally, here's a line marked as not executed.</span></pre></div>
+
+    <h3>Coverage Details</h3>
+
+    <table class="details">
+      <tbody>
+        <tr class="inferred">
+          <td><pre><a name="line2">2</a> # Use this hook to configure contact mailer.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line3">3</a> ContactUs.setup do |config|</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line4">4</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line5">5</a>   # ==&gt; Mailer Configuration</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line6">6</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line7">7</a>   # Configure the e-mail address which email notifications should be sent from.  If emails must be sent from a verified email address you may set it here.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line8">8</a>   # Example:</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line9">9</a>   # config.mailer_from = &quot;contact@please-change-me.com&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line10">10</a>   # config.mailer_from = nil</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line11">11</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line12">12</a>   # Configure the e-mail address which should receive the contact form email notifications.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line13">13</a>   config.mailer_to = &quot;tagoregardenwala@gmail.com&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line14">14</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line15">15</a>   # ==&gt; Form Configuration</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line16">16</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a>   # Configure the form to ask for the users name.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line18">18</a>   config.require_name = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line19">19</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line20">20</a>   # Configure the form to ask for a subject.</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line21">21</a>   config.require_subject = true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line22">22</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line23">23</a>   # Configure the form gem to use.</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line24">24</a>   # Example:</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line25">25</a>   # config.form_gem = &#39;formtastic&#39;</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line26">26</a>   config.form_gem = &#39;simple_form&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line27">27</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line28">28</a>   # Configure the redirect URL after a successful submission</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line29">29</a>   config.success_redirect = &#39;/contact-us&#39;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line30">30</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line31">31</a> end</pre></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Generated on 2016-07-10 02:04:31 +0530 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+
+  </body>
+</html>

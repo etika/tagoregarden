@@ -8,7 +8,12 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
    def after_sign_in_path_for(resource)
+    if resource.roles.pluck(:name).include?("customer")
       session[:user_id]=resource.id
-      root_path
+      home_path
+    else
+      session[:user_id]=resource.id
+      new_entry_path
+    end
   end
 end
