@@ -20,3 +20,15 @@
   # end 
 
 # end
+require 'spec_helper'
+
+RSpec.describe HomeController, :type => :controller do
+  let(:user) { FactoryGirl.create(:user) }
+ 
+  describe "Get Coming Soon" do
+    it "should response 200" do
+      get :coming_soon
+      expect(response.status).to eq(200)
+    end
+ end
+end

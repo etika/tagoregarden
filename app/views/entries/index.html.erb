@@ -31,7 +31,7 @@
         <td><%= entry.pincode %></td>
         <td><%= entry.other_details %></td>
         <td><%= entry.category_id %></td>
-        <td><%= entry.owner_id %></td>
+        <td><%= current_user.full_name %></td>
         <td><%= link_to 'Show', entry %></td>
         <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
         <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>

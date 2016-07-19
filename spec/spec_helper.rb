@@ -12,9 +12,35 @@
 #
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
+# require 'simplecov'
+# require 'simplecov-rcov'
+
+# SimpleCov.formatters = [
+#   SimpleCov::Formatter::HTMLFormatter,
+#   SimpleCov::Formatter::RcovFormatter
+# ]
+
+# SimpleCov.start
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+#require 'rspec/autorun'
+require 'capybara/rspec'
+require 'capybara/rails'
+require 'shoulda/matchers'
+# Requires supporting ruby files with custom matchers and macros, etc,
+# in spec/support/ and its subdirectories.
+# Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+
+  OmniAuth.config.test_mode = true
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+    config.include Devise::TestHelpers, :type => :controller
+
+  # config.include RSpec::Rails::RequestExampleGroup, type: :model
+  # config.include RSpec::Rails::RequestExampleGroup, type: :mailer
+
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
@@ -75,4 +101,22 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 =end
+  config.before(:suite) do
+    DatabaseCleaner[:active_record].strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.start
+    DatabaseCleaner.clean
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
+  config.after(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
 end

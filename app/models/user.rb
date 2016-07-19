@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable
   has_and_belongs_to_many :roles
-  attr_accessor :full_name
+ validates_presence_of :email
+ attr_accessor :full_name
 
   # Getter
   def full_name

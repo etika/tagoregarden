@@ -47,7 +47,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @entry.owner_id %>
+  <%= current_user.full_name %>
 </p>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |

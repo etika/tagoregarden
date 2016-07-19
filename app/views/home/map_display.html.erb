@@ -13,7 +13,7 @@
 <h1><%=@category.titleize.pluralize%> in Tagore Garden Area </h1></br>
 <% @entries.each do |entry| -%>
     <li>
-       <%= entry.other_details %> <%= entry.address %>,contact <%=entry.owner_owner_name%> <%=entry.owner_phone_number%></br>  
+       <%= entry.other_details %> <%= entry.address %>,contact <%=entry.user.full_name%> <%=entry.user.phone_number%></br>  
        Rating:<div class="fixed" data-score=<%=entry.avg_rating%>></div>
        <%=link_to "Show Reviews","#",data:{entry:entry.id},class:"show_reviews"%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <%if user_signed_in?%>
