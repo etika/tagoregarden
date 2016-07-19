@@ -34,6 +34,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem "rails_best_practices"
+gem "paperclip", "~> 5.0.0"
+
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
 gem 'social-share-button'

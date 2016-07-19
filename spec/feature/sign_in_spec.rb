@@ -18,8 +18,8 @@ describe "the signin process",:js => true do
   it "signs me in" do
     visit new_user_session_path
     within("#new_user") do
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => user.password
+      fill_in 'Email', :with => "etikaahuja@gmail.com"
+      fill_in 'Password', :with => "password"
        # fill_in 'session[email]', with: user.email
     # fill_in 'session[password]', with: user.password
   # find('input[name="commit"]').click
@@ -27,9 +27,9 @@ describe "the signin process",:js => true do
           # click_on('Log in')
 
     end
-        expect(page).to have_content 'Invalid email or password'
+        # expect(page).to have_content 'Logout'
 
-              # expect(page.current_path).to eq home_path
+              expect(page.current_path).to eq home_path
 
 
     # click ('Log in')

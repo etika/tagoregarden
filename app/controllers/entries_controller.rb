@@ -24,6 +24,7 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
+    byebug
     @entry = Entry.new(entry_params)
 
     respond_to do |format|
@@ -40,6 +41,7 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1
   # PATCH/PUT /entries/1.json
   def update
+    byebug
     respond_to do |format|
       if @entry.update(entry_params)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
@@ -69,6 +71,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:latitude, :longitude, :address, :city, :state, :country, :pincode, :other_details, :category_id, :user_id)
+      params.require(:entry).permit(:latitude, :longitude, :address, :city, :state, :country, :pincode, :other_details, :category_id, :user_id,:image)
     end
 end
