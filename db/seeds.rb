@@ -18,3 +18,8 @@ Category.create(:category_name=>"Grocery")
 Category.create(:category_name=>"Bank")
 Category.create(:category_name=>"Bakery")
 end
+if Role.count ==0
+  Role.create(:name=>"customer")
+  Role.create(:name=>"admin")
+  Role.create(:name=>"business")
+end
