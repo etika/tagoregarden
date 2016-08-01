@@ -45,7 +45,6 @@ gem 'social-share-button'
 gem 'contact_us', '~> 1.0.1'
 gem 'simple_form'
 gem "figaro"
-gem "blogit"
 gem 'friendly_id'
 # gem 'forem', :github => "radar/forem", :branch => "rails4"
 
