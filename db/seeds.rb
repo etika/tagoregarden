@@ -58,13 +58,13 @@ if Role.count ==0
   Role.create(:name=>"admin")
   Role.create(:name=>"business")
 end
-User.populate 100 do |person|
-      person.first_name    = Faker::Name.name
-      person.last_name = Faker::Company.name
-      person.email   = Faker::Internet.email
-      person.phone_number   = Faker::PhoneNumber.phone_number
-      person.address  = Faker::Address.street_address
-      # person.city    = Faker::Address.city
-      # person.state   = Faker::Address.us_state_abbr
-      # person.zip     = Faker::Address.zip_code
-    end
+# User.populate 100 do |person|
+#       person.first_name    = Faker::Name.name
+#       person.last_name = Faker::Company.name
+#       person.email   = Faker::Internet.email
+#       person.phone_number   = Faker::PhoneNumber.phone_number
+#       person.address  = Faker::Address.street_address
+#       # person.city    = Faker::Address.city
+#       # person.state   = Faker::Address.us_state_abbr
+#       # person.zip     = Faker::Address.zip_code
+#     end
