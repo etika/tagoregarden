@@ -25,7 +25,6 @@ class UpdatesController < ApplicationController
   # POST /updates
   # POST /updates.json
   def create
-    byebug
     @update = Update.new(update_params)
     @update.tag_list.add(params[:update][:tag_list] )
     respond_to do |format|
