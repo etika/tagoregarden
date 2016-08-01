@@ -1,15 +1,27 @@
 Rails.application.routes.draw do
 
+  # This line mounts Forem's routes at /forums by default.
+  # This means, any requests to the /forums URL of your application will go to Forem::ForumsController#index.
+  # If you would like to change where this extension is mounted, simply change the :at option to something different.
+  #
+  # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
+
+
   post 'reviews/create'
   get 'reviews/show'
   resources :entries
   resources :categories
+  resources :updates
   get 'home'=>'home#index'
   get 'coming-soon'=>'home#coming_soon'
   get 'about-us'=>'home#about_us'
   # get 'contact-us'=>'home#contact_us'
   get 'faq'=>'home#faq'
   get 'map-display'=>'home#map_display'
+  mount Thredded::Engine => '/forum'
+  resources :updates do
+    get :autocomplete_tag_name, :on => :collection
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

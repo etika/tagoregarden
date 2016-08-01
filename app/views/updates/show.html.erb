@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @update.topic %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @update.details %>
+</p>
+<p>
+<strong>Topic tags </strong>
+<%=@update.tag_list.join(", ")
+%>
+</p>
+<%= link_to 'Edit', edit_update_path(@update) %> |
+<%= link_to 'Back', updates_path %>

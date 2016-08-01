@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable
   has_and_belongs_to_many :roles
- validates_presence_of :email
+  validates_presence_of :email
  attr_accessor :full_name
 
   # Getter
@@ -34,4 +34,11 @@ class User < ActiveRecord::Base
    def is?(role)
     return !!self.roles.find_by_name(role.to_s.camelize)
   end
+  
+  # def admin?
+  #   self.roles.find_by_name("admin")
+  # end
+def admin
+  # has_role?(:admin)
+end
 end

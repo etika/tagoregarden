@@ -35,6 +35,9 @@ gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem "rails_best_practices"
 gem "paperclip", "~> 5.0.0"
+gem 'acts-as-taggable-on', '~> 3.4'
+gem 'rails4-autocomplete'
+gem 'thredded', '~> 0.6.1'
 
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
@@ -42,6 +45,10 @@ gem 'social-share-button'
 gem 'contact_us', '~> 1.0.1'
 gem 'simple_form'
 gem "figaro"
+gem "blogit"
+gem 'friendly_id'
+# gem 'forem', :github => "radar/forem", :branch => "rails4"
+
 
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
@@ -64,6 +71,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'quiet_assets'
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'populator'
+  gem 'faker'
+
 end
 group :production do
   gem 'pg'
@@ -74,7 +84,6 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', require: false
   gem 'database_cleaner'
-  gem 'faker'
   gem 'simplecov-rcov', :require => false
   gem 'capybara'
   gem 'selenium-webdriver'

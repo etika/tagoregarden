@@ -1,11 +1,14 @@
+<!-- <%#if action_name != 'blog'%>
 <nav class="navbar navbar-inverse">
-  ...<h5>Tagore Garden Wala </h5>
-  <%if user_signed_in? %>
-   <%= link_to  destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
+  <h5>Tagore Garden Wala </h5>
+  <%#if user_signed_in? %>
+   <%#= link_to  destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
     <i class="fa fa-power-off fa-fw"></i> Logout
-  <% end %>
-  <%else%>
-    <%= link_to('Register', new_user_registration_path)  %>
-    <%= link_to('Login', new_user_session_path)  %>  
-<% end %>
+  <%# end %>
+  <%#else%>
+    <%#= link_to('Register', new_user_registration_path)  %>
+    <%#= link_to('Login', new_user_session_path)  %>  
+  <%# end %>
 </nav>
+<%#end%>
+ -->

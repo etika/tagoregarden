@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.raty
+//= require autocomplete-rails
 //= require gmaps/google
 //= require oms.min
 //= require social-share-button
