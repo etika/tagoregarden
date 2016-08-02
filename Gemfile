@@ -38,6 +38,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'rails4-autocomplete'
 gem 'thredded', '~> 0.6.1'
+gem 'aws-sdk', '~> 2.3'
 
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
