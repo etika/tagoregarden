@@ -102,6 +102,7 @@ Rails.application.configure do
   }
 }
 Paperclip.options[:command_path] = "/usr/local/bin/"
+config.action_controller.asset_host = ENV['CLOUDFRONT_ENDPOINT']
 
 
 end
