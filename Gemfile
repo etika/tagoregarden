@@ -48,6 +48,7 @@ gem 'simple_form'
 gem "figaro"
 gem 'friendly_id'
 # gem 'forem', :github => "radar/forem", :branch => "rails4"
+gem 'actionpack-page_caching'
 
 
 group :assets do

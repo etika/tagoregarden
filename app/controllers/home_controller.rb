@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  caches_page :index
   def index
       set_meta_tags title: "Tagore Garden Wala |One place for All about tagore garden",
                 keywords: "tagore garden wala,tagore garden,tagore,garden",
