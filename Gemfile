@@ -49,8 +49,8 @@ gem "figaro"
 gem 'friendly_id'
 # gem 'forem', :github => "radar/forem", :branch => "rails4"
 gem 'actionpack-page_caching'
-
-
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
 end
