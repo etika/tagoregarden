@@ -71,6 +71,7 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bonsai-elasticsearch-rails (0.0.4)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -438,6 +439,7 @@ DEPENDENCIES
   acts-as-taggable-on (~> 3.4)
   ads-rails
   aws-sdk (~> 2.3)
+  bonsai-elasticsearch-rails
   bootstrap-sass (~> 3.3.1)
   byebug
   capybara
