@@ -16,4 +16,10 @@ class Entry < ActiveRecord::Base
      rating= self.reviews.sum(:rating)
     avg_rating=(rating/self.reviews.count) rescue nil
   end
+  def as_indexed_json(options={})
+    as_json(
+      only: [:address, :state, :city, :country,:pincode,:other_details],
+      include: {categories: {only: [:category_name]}}
+    )
+  end
 end
