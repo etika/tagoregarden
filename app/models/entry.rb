@@ -19,7 +19,7 @@ class Entry < ActiveRecord::Base
   def as_indexed_json(options={})
     as_json(
       only: [:address, :state, :city, :country,:pincode,:other_details],
-      include: {categories: {only: [:category_name]}}
+      include: {category: {only: [:category_name]}}
     )
   end
 end
