@@ -2,7 +2,7 @@
 <div class="container">
 <%records.each do |rec|%>
   <div class="jumbotron">
-  <%= link_to image_tag(@entry.image.url(:med)), @entry.image.url %>
+  <%= link_to image_tag(rec.image.url(:med)),rec.image.url %>
    <%=rec.category.category_name%>
   <%= rec.address%>
   <%= rec.city%>
