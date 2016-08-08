@@ -1,8 +1,15 @@
+<h1> Results </h1>
+<div class="container">
 <%records.each do |rec|%>
-  <%=rec.category.category_name%>
+  <div class="jumbotron">
+  <%= link_to image_tag(@entry.image.url(:med)), @entry.image.url %>
+   <%=rec.category.category_name%>
   <%= rec.address%>
   <%= rec.city%>
   <%= rec.state%>
   <%= rec.country%>
   <%= rec.other_details%>
+  <%= rec.user.phone_number%>
+</div>
   <%end%>
+</div>
