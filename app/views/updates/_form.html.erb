@@ -5,7 +5,7 @@
     <%= f.input :topic %>
     <%= f.input :details %>
     <%#= f.input :tag_list%>
-    <%= f.input :tag_list, :label => "所屬專案", :url => autocomplete_tag_name_updates_path, :as => :autocomplete%>
+    <%= f.input :tag_list, :label => "News Tag", :"data-delimiter" => ' ' ,:url => autocomplete_tag_name_updates_path, :as => :autocomplete%>
 
   </div>
 
