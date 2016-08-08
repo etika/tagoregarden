@@ -1,9 +1,11 @@
 <% content_for :title do %>Tagore Garden Wala|All about Tagore Garden<% end %>
  
-<%= form_tag(search_path, method: 'get') do %>
+<%= form_tag(search_path, method: 'get',remote:true) do %>
   <%= text_field_tag(:q, params[:q]) %>
   <%= submit_tag('Search') %>
 <% end %>
- <%= render :partial => 'home' %>
- <%= google_adsense_include_tag client: 'ca-pub-2314450325724265', slot: '6642889430'%>
+<div class="center">
+  <%= render :partial => 'home' %>
+</div>
+ <%#= google_adsense_include_tag client: 'ca-pub-2314450325724265', slot: '6642889430'%>
 

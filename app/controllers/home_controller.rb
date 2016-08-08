@@ -30,6 +30,8 @@ class HomeController < ApplicationController
   end
 
   def search
+    results=Entry.search params[:q]
+    @records=results.records
   end
 
   def map_display
