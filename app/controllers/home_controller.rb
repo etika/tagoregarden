@@ -29,6 +29,9 @@ class HomeController < ApplicationController
                 description: "Frequently asked Questions "
   end
 
+  def search
+  end
+
   def map_display
     @entries = Category.find(params[:category]).entries.paginate(:page => params[:page], :per_page => 4)
     @category = Category.find(params[:category]).category_name.downcase

@@ -1,0 +1,19 @@
+<div class="container">
+<%i =-2%>
+<!-- <div class="row"> -->
+<%Category.all.each do|cat|%>
+  <% if i%3 == 0%>
+     <div class="row">
+  <%end%>
+      <%= link_to map_display_path(:category=>cat.id) do %>
+      <div  class="mapper box  col-lg-4 col-sm-4 col-md-3 <%=cat.category_name.downcase.parameterize.underscore%>">
+      <center><i><h1><%=cat.category_name.pluralize%></h1><i> </center>
+      </div>
+      <%end%>
+      <% if i%3 ==0%>
+      </div>
+        <div class="clear"></div></br>
+      <%end%>
+      <%i=i+1%>
+<%end%>
+</div>

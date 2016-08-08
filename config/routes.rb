@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'home'=>'home#index'
   get 'coming-soon'=>'home#coming_soon'
   get 'about-us'=>'home#about_us'
+  get 'search'=>'home#search'
   # get 'contact-us'=>'home#contact_us'
   get 'faq'=>'home#faq'
   get 'map-display'=>'home#map_display'

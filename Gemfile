@@ -74,7 +74,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'populator'
   gem 'faker'
-
+  # gem "better_errors"
+  # gem "binding_of_caller"
 end
 group :production do
   gem 'bonsai-elasticsearch-rails'
