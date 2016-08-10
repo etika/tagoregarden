@@ -4,18 +4,34 @@
 <%= link_to 'Back', entries_path %>
 <script>
 $(document).ready(function(){
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      $("#error_explanation").append("Geolocation is not supported by this browser.")
-    }
-}
-  getLocation();
-function showPosition(position) {
-    $("#entry_latitude").attr("value",position.coords.latitude)
-    $("#entry_longitude").attr("value",position.coords.longitude)
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else {
+//       $("#error_explanation").append("Geolocation is not supported by this browser.")
+//     }
+// }
+//   getLocation();
+// function showPosition(position) {
+//     $("#entry_latitude").attr("value",position.coords.latitude)
+//     $("#entry_longitude").attr("value",position.coords.longitude)
 
-}
+// }
+
+    function success(position){
+      $("#entry_latitude").attr("value",position.coords.latitude)
+      $("#entry_longitude").attr("value",position.coords.longitude)
+    }
+
+    function fail(msg){
+    console.log(msg.code);
+  }
+
+  var msg ='Sorry, we were unable to get your location';
+
+    if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, fail);
+  }
+
 });
 </script>
