@@ -6,27 +6,34 @@
  <%= javascript_include_tag "oms.min"%>
  <%= stylesheet_link_tag  'map_display' %>
 <div class="container">
-<div class="row">
-<div   id="multi_markers" class="g_map left-div col-lg-8" >
-</div> 
-<div class="right-div col-lg-4">
-<h1><%=@category.titleize.pluralize%> in Tagore Garden Area </h1></br>
-<% @entries.each do |entry| -%>
-    <li>
-       <%= entry.other_details %> <%= entry.address %>,contact <%=entry.user.full_name%> <%=entry.user.phone_number%></br>  
-       Rating:<div class="fixed" data-score=<%=entry.avg_rating%>></div>
-       <%=link_to "Show Reviews","#",data:{entry:entry.id},class:"show_reviews"%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <%if user_signed_in?%>
-          <%=link_to "Add Reviews","#",data:{toggle:"modal",target:"#myModal1",entry:entry.id},:class=>"add_review"%>
-       <%else%>
-          <%=link_to "Add Reviews","#",data:{toggle:"modal",target:"#myModal"} %>
-       <%end%>
-    </li>
+  <div class="row">
+  <div   id="multi_markers" class="g_map left-div col-lg-8" >
+  </div> 
+  <div class="right-div col-lg-4">
+    <h1><%=@category.titleize.pluralize%> in Tagore Garden Area </h1></br>
+    <% @entries.each do |entry| -%>
+        <li>
+           <%= entry.other_details %> <%= entry.address %>,contact <%=entry.user.full_name%> <%=entry.user.phone_number%></br>  
+           Rating:<div class="fixed" data-score=<%=entry.avg_rating%>></div>
+           <%=link_to "Show Reviews","#",data:{entry:entry.id},class:"show_reviews"%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <%if user_signed_in?%>
+              <%=link_to "Add Reviews","#",data:{toggle:"modal",target:"#myModal1",entry:entry.id},:class=>"add_review"%>
+           <%else%>
+              <%=link_to "Add Reviews","#",data:{toggle:"modal",target:"#myModal"} %>
+           <%end%>
+        </li>
 
-<% end -%>
-<%= will_paginate @entries %>
-</div>
-</div>
+    <% end -%>
+    <%= will_paginate @entries %>
+  </div>
+  <div>
+   <marquee direction="right">
+<% @category.schemes.each do |scheme|%>
+  <%= raw scheme.content%>
+<%end%>
+</marquee>
+  </div>
+  </div>
 </div>
 <%= render "shared/add_reviews" %>
 <%= render "shared/reviews"%>

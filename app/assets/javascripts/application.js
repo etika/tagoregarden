@@ -16,6 +16,7 @@
 //= require autocomplete-rails
 //= require gmaps/google
 //= require oms.min
+//= require ckeditor/init
 //= require social-share-button
 //= require bootstrap-sprockets
 //= require turbolinks

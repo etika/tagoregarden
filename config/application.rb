@@ -27,6 +27,7 @@ module Tagoregarden
     'X-Frame-Options' => 'ALLOWALL'
     }
     config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
+    config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
 
   end
 end
