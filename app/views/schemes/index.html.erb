@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Schemes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entry</th>
+      <th>Category</th>
+      <th>Content</th>
+      <th>From date</th>
+      <th>End date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schemes.each do |scheme| %>
+      <tr>
+        <td><%= scheme.entry_id %></td>
+        <td><%= scheme.category_id %></td>
+        <td><%= scheme.content %></td>
+        <td><%= scheme.from_date %></td>
+        <td><%= scheme.end_date %></td>
+        <td><%= link_to 'Show', scheme %></td>
+        <td><%= link_to 'Edit', edit_scheme_path(scheme) %></td>
+        <td><%= link_to 'Destroy', scheme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scheme', new_scheme_path %>
