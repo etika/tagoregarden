@@ -48,6 +48,15 @@
     <%= f.text_field :other_details %>
   </div>
   <div class="field">
+    <%= f.label :paid_home_delivery, "Paid Home Delivery" %>
+    <%= f.radio_button :paid_home_delivery, false %> No
+    <%= f.radio_button :paid_home_delivery,true %>Yes<br /> 
+  </div>
+  <div class="field check" style="display: none">
+  <%= f.label :terms_and_conditions%></br>
+  <%= f.text_area :terms_and_conditions%>
+  </div>
+  <div class="field">
     <%= f.label :category_id %><br>
     <%= f.collection_select(:category_id, Category.all, :id, :category_name) %>
   </div>
@@ -58,3 +67,11 @@
     <%= f.submit "Submit", data: {disable_with: 'Please wait...'}%>
   </div>
 <% end %>
+<script>
+$('#entry_paid_home_delivery_true').click(function (e) {
+  $(".check").show();
+});
+$('#entry_paid_home_delivery_false').click(function (e) {
+  $(".check").hide();
+});
+</script>
