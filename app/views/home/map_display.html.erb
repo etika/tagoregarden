@@ -10,7 +10,7 @@
   <div   id="multi_markers" class="g_map left-div col-lg-8" >
   </div> 
   <div class="right-div col-lg-4">
-    <h1><%=@category.titleize.pluralize%> in Tagore Garden Area </h1></br>
+    <h1><%=@category.category_name.downcase.titleize.pluralize%> in Tagore Garden Area </h1></br>
     <% @entries.each do |entry| -%>
         <li>
            <%= entry.other_details %> <%= entry.address %>,contact <%=entry.user.full_name%> <%=entry.user.phone_number%></br>  
