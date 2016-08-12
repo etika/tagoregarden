@@ -44,7 +44,8 @@
   $(document).ready(function(){
   var json_map=<%=@json_map.to_json.html_safe%>
   var handler = Gmaps.build('Google',
-        {markers:
+        {  mapType: google.maps.MapTypeId.ROADMAP,
+          markers:
           {clusterer: {
             gridSize: 40,
             maxZoom: 10
