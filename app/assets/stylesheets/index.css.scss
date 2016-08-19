@@ -4,7 +4,7 @@ div.grey          { background-color: #cccccc; }
 div.red           { background-color: #e14e32; }
 div.clear         { clear: both; }
 
-.box{color:black;width: 380px; height: 300px;padding-right: 10px;float:left}
+.box{width: 380px; height: 300px;padding-right: 10px;float:left}
 .hotel{background: url(/assets/hotel.jpeg) center no-repeat;}
 .doctor{background: url(/assets/doctor.png) center no-repeat;}
 .tailor{background: url(/assets/tailor.png) center no-repeat;}
@@ -57,9 +57,9 @@ div.clear         { clear: both; }
 
 
 
-.box h1{ position: relative;top:240px;}
+.box h3{ position: relative;top:240px;color:#3300FF;}
 @media (min-width: 768px) and (max-width: 1280px) {
-.box{color:black;width: 150px; height: 200px;padding-right: 15px;float:left}
-.box h1{ position: relative;top:190px;font-size:13px;font-weight:bold;}
+.box{width: 150px; height: 200px;padding-right: 15px;float:left}
+.box h3{ position: relative;top:190px;font-size:10px;color:#3300FF;}
 
 }

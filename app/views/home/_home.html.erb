@@ -7,7 +7,7 @@
   <%end%>
       <%= link_to map_display_path(:category=>cat.id) do %>
       <div  class="mapper box  col-lg-4 col-sm-4 col-md-3 <%=cat.category_name.downcase.parameterize.underscore%>">
-      <center><i><h1><%=cat.category_name.pluralize%></h1><i> </center>
+      <center><i><h3><%=cat.category_name.pluralize%></h3><i> </center>
       </div>
       <%end%>
       <% if i%3 ==0%>
