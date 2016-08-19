@@ -32,6 +32,7 @@ gem 'devise'
 gem 'will_paginate'
 gem 'omniauth'
 gem 'nprogress-rails'
+gem 'google-webfonts-rails', '~> 0.0.4'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem "rails_best_practices"
