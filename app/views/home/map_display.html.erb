@@ -13,7 +13,7 @@
     <h1><%=@category.category_name.downcase.titleize.pluralize%> in Tagore Garden Area </h1></br>
     <% @entries.each do |entry| -%>
         <li>
-           <%= entry.other_details %> <%= entry.address %>,contact <%=entry.user.full_name%> <%=entry.user.phone_number%>.We   <%=(entry.paid_home_delivery == true) ? "don't" : "do"%> provide free home delivery. <%=(entry.paid_home_delivery == true) ? "Terms And Conditions are"+ entry.terms_and_conditions : ""%></br> 
+           <%= entry.other_details %> <%= entry.address %>,contact <%=entry.user.full_name%> <%=entry.user.phone_number%>.We   <%=(entry.paid_home_delivery == true) ? "don't" : "dodat"%> provide free home delivery. <%=(entry.paid_home_delivery == true) ? "Terms And Conditions are"+ entry.terms_and_conditions : ""%></br> 
            Rating:<div class="fixed" data-score=<%=entry.avg_rating%>></div>
            <%=link_to "Show Reviews","#",data:{entry:entry.id},class:"show_reviews"%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <%if user_signed_in?%>
@@ -26,13 +26,19 @@
     <% end -%>
     <%= will_paginate @entries %>
   </div>
-  <div>
-   <marquee direction="right">
-<% @category.schemes.each do |scheme|%>
-  <%= raw scheme.content%>
-<%end%>
-</marquee>
-  </div>
+  <marquee direction="right">
+      <div>
+        <% @category.schemes.each do |scheme|%>
+          <div style="float: left;padding-right: 10px;">
+             <%= raw scheme.content%>
+          </div>
+        <%end%>
+      </div>
+  </marquee>
+
+
+
+
   </div>
 </div>
 <%= render "shared/add_reviews" %>
