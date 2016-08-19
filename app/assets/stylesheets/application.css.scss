@@ -13,6 +13,9 @@
  *= require index
  *= require jquery.countdown
  *= require social-share-button
+ *= require nprogress
+ *= require nprogress-bootstrap
+ *= require nprogress-turbolinks5
  *= require_tree .
  *= require_self
  */

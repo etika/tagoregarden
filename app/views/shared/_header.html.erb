@@ -2,8 +2,10 @@
   <!-- <h5>Tagore Garden Wala </h5> -->
   <%=image_tag("logo.png", height: '80', width: '500')%>
   <%if user_signed_in? %>
-   <%= link_to  destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
-    <i class="fa fa-power-off fa-fw"></i> Logout
+    <span style="float:right">
+      <%= link_to  destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
+      <i class="fa fa-power-off fa-fw"></i> Logout
+    </span>
   <% end %>
   <%else%>
   <span style="float:right">

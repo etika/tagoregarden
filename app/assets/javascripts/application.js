@@ -19,5 +19,7 @@
 //= require ckeditor/init
 //= require social-share-button
 //= require bootstrap-sprockets
+//= require nprogress
+//= require nprogress-turbolinks
 //= require turbolinks
 //= require jquery.countdown

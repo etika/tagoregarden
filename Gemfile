@@ -31,6 +31,7 @@ gem 'meta-tags'
 gem 'devise'
 gem 'will_paginate'
 gem 'omniauth'
+gem 'nprogress-rails'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem "rails_best_practices"
