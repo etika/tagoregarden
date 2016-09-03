@@ -32,8 +32,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#coming_soon'
    devise_for :users, :controllers => { :registrations => 'registrations' ,:omniauth_callbacks => "omniauth_callbacks",:sessions => 'sessions',confirmations: 'confirmations',:passwords => "passwords"}
-# get 'users/auth/:provider/callback', to: 'sessions#create'
 
+# get 'users/auth/:provider/callback', to: 'sessions#create'
+  resources :products
+  resource :shopping_cart
 
 
 

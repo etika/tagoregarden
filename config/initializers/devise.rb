@@ -272,4 +272,9 @@ config.navigational_formats = ["*/*", :html, :json]
 require 'omniauth-google-oauth2'
   config.omniauth :google_oauth2, "596987185555-nc293iqavg8u6bfhsajn60oa7k94e35v.apps.googleusercontent.com", "z541M7Kon8XMmkR7qtRhn1QE"
 
+  config.omniauth :stripe_connect,
+     ENV['stripe_client_id'],
+      ENV['stripe_api_key'],
+    :scope => 'read_write', # or :scope => 'read_only'
+    :stripe_landing => 'register' # or :stripe_landing => 'register'
 end

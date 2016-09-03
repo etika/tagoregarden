@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
   caches_page :index
   def index
+    Rack::MiniProfiler.step("fetch projects") do
+     Category.all
+    end
       set_meta_tags title: "Tagore Garden Wala |One place for All about tagore garden",
                 keywords: "tagore garden wala,tagore garden,tagore,garden",
                 description: "Coming Soon,to know all about tagore garden "

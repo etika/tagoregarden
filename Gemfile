@@ -28,6 +28,7 @@ gem 'gmaps4rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'jquery-countdown-rails'
 gem 'meta-tags'
+gem 'acts_as_shopping_cart', '~> 0.2.1'
 gem 'devise'
 gem 'will_paginate'
 gem 'omniauth'
@@ -54,6 +55,9 @@ gem 'actionpack-page_caching'
 gem 'elasticsearch-rails'
 gem 'elasticsearch-model'
 gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'omniauth-stripe-connect'
+gem 'rack-mini-profiler'
+
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
 end

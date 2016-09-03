@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812060422) do
+ActiveRecord::Schema.define(version: 20160831081334) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "category_name"
@@ -70,6 +70,13 @@ ActiveRecord::Schema.define(version: 20160812060422) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.float    "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "entry_id"
@@ -101,6 +108,22 @@ ActiveRecord::Schema.define(version: 20160812060422) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "shopping_cart_items", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.integer  "quantity"
+    t.integer  "item_id"
+    t.string   "item_type"
+    t.float    "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shopping_carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -364,6 +387,10 @@ ActiveRecord::Schema.define(version: 20160812060422) do
     t.string   "provider"
     t.string   "uid"
     t.string   "phone_number"
+    t.string   "publishable_key"
+    t.string   "pay_provider"
+    t.string   "pay_uid"
+    t.string   "access_code"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
