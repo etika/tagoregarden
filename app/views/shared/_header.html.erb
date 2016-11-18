@@ -1,20 +1,18 @@
-<%if  controller_name != 'surveys' && controller_name != 'attempts' && controller_name!='questions' %>
 <nav class="navbar">
   <!-- <h5>Tagore Garden Wala </h5> -->
   <%=image_tag("logo.png", height: '80', width: '500')%>
   <%if user_signed_in?  %>
     <span style="float:right">
-      <%= link_to  destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
+      <%= link_to  main_app.destroy_user_session_path, method: :delete ,data: {confirm: 'Are you sure?'} do %>
       <i class="fa fa-power-off fa-fw"></i> Logout
     </span>
   <%end %>
   <%else%>
   <span style="float:right">
-    <%= link_to('Register', new_user_registration_path)  %>
-    <%= link_to('Login', new_user_session_path)  %>  
+    <%= link_to('Register', main_app.new_user_registration_path)  %>
+    <%= link_to('Login', main_app.new_user_session_path)  %>  
   <% end %>
   </span>
   <hr>
 </nav>
-<%end%>
  
