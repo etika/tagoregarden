@@ -7,6 +7,13 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+  # def current_user
+  #     @current_user ||= User.find(session[:user_id])
+  #   end
+
+    def can_administer?
+      current_user.try(:admin?)
+    end
    def after_sign_in_path_for(resource)
     if resource.roles.pluck(:name).include?("customer")
       session[:user_id]=resource.id

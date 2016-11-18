@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831081334) do
+ActiveRecord::Schema.define(version: 20161117080662) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "category_name"
@@ -75,6 +75,47 @@ ActiveRecord::Schema.define(version: 20160831081334) do
     t.float    "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "rapidfire_answers", force: :cascade do |t|
+    t.integer  "attempt_id"
+    t.integer  "question_id"
+    t.text     "answer_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rapidfire_answers", ["attempt_id"], name: "index_rapidfire_answers_on_attempt_id"
+  add_index "rapidfire_answers", ["question_id"], name: "index_rapidfire_answers_on_question_id"
+
+  create_table "rapidfire_attempts", force: :cascade do |t|
+    t.integer  "survey_id"
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rapidfire_attempts", ["survey_id"], name: "index_rapidfire_attempts_on_survey_id"
+  add_index "rapidfire_attempts", ["user_id", "user_type"], name: "index_rapidfire_attempts_on_user_id_and_user_type"
+
+  create_table "rapidfire_questions", force: :cascade do |t|
+    t.integer  "survey_id"
+    t.string   "type"
+    t.string   "question_text"
+    t.integer  "position"
+    t.text     "answer_options"
+    t.text     "validation_rules"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rapidfire_questions", ["survey_id"], name: "index_rapidfire_questions_on_survey_id"
+
+  create_table "rapidfire_surveys", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "reviews", force: :cascade do |t|

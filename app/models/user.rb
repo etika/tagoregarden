@@ -35,9 +35,9 @@ class User < ActiveRecord::Base
     return !!self.roles.find_by_name(role.to_s.camelize)
   end
   
-  # def admin?
-  #   self.roles.find_by_name("admin")
-  # end
+  def admin?
+    self.roles.find_by_name("admin").present? ? true : false
+  end
 def admin
   # has_role?(:admin)
 end
