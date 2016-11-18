@@ -5,7 +5,7 @@
   <%- @attempt_builder.answers.each do |answer| %>
     <%= f.fields_for("#{answer.question.id}", answer) do |answer_form| %>
       <%= render_answer_form_helper(answer, answer_form) %>
-    <% end %>
+    <% end %></br>
   <% end %>
   <%= f.submit "Save" %>
 <% end %>
