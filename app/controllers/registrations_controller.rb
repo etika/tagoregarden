@@ -1,7 +1,7 @@
 require 'twilio_rest'
 class RegistrationsController < Devise::RegistrationsController
     # respond_to :json,:js,:html
-
+      include TwilioRest
   def new
     super
   end
@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
     # super
     if params[:user][:provider].present?
       @user = User.new(fb_permitted_user)
-       send_message(number_to_send_to,"assa")
+      send_message(params[:user][:phone_number],"Welcome to Tagore Garden Wala")
       @user.skip_confirmation!
       @user.save(validate: false)
       #  begin
