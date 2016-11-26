@@ -1,3 +1,4 @@
+require 'twilio_rest'
 class RegistrationsController < Devise::RegistrationsController
     # respond_to :json,:js,:html
 
@@ -8,6 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
     # super
     if params[:user][:provider].present?
       @user = User.new(fb_permitted_user)
+       send_message(number_to_send_to,"assa")
       @user.skip_confirmation!
       @user.save(validate: false)
       #  begin

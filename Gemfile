@@ -58,7 +58,7 @@ gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'omniauth-stripe-connect'
 gem 'rack-mini-profiler'
 gem 'rapidfire'
-
+gem 'twilio-ruby'
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
 end
