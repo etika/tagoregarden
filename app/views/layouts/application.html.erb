@@ -34,6 +34,22 @@ $.src='https://v2.zopim.com/?4N6CvfGzToAq2EHnm2X5xmK3OpgryNbr';z.t=+new Date;$.
 type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </script>
 <!--End of Zendesk Chat Script-->
+<!-- Add the script to the HEAD of your document -->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+var scrl = document.getElementsByTagName("title")[0].innerHTML;
+function scrlsts() {
+ scrl = scrl.substring(1, scrl.length) + scrl.substring(0, 1);
+ document.title = scrl;
+ setTimeout("scrlsts()", 300);
+ }
+//  End -->
+</script>
+
+
+<!-- Add the event loader to the body tag as below -->
+
+<body onLoad="scrlsts()">
 </head>
 <%= render "shared/header"%>
 

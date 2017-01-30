@@ -59,6 +59,8 @@ gem 'omniauth-stripe-connect'
 gem 'rack-mini-profiler'
 gem 'rapidfire'
 gem 'twilio-ruby'
+gem 'maktoub'
+
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
 end
