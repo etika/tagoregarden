@@ -1,0 +1,3 @@
+alert("ahhhashahshas")
+// $(".content").html("<%#=escape_javascript(render 'flash_message', flash_message: @flash_message )%>");
+$('.content').html("<%= escape_javascript render(:partial => 'flash_message', :locals => { :flash_message => @flash_message }) %>");

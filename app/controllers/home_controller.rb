@@ -1,3 +1,4 @@
+    require 'sanitize'
 class HomeController < ApplicationController
   caches_page :index
   def index

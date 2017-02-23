@@ -44,6 +44,8 @@ gem 'thredded', '~> 0.6.1'
 gem 'aws-sdk', '~> 2.3'
 gem 'cowsay'
 gem 'blogo'
+# gem 'gibbon'
+gem 'gibbon', :git => 'https://github.com/amro/gibbon.git'
 
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test

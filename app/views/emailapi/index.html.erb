@@ -1,0 +1,11 @@
+<h1>Subscribe to Awesome News Letter</h1>
+<div class="content">
+<% if @flash_message.present?%>
+  <%= render partial:"flash_message",locals:{flash_message: @flash_message }%>
+
+<% end %>
+</div>
+<%= form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
+   <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+   <%= submit_tag("Sign me up!") %>
+<% end %>

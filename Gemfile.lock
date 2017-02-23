@@ -7,6 +7,14 @@ GIT
       orm_adapter (~> 0.5.0)
 
 GIT
+  remote: https://github.com/amro/gibbon.git
+  revision: 5058ad64c9462148a4f245ead090026b6cad18da
+  specs:
+    gibbon (3.0.1)
+      faraday (>= 0.9.1)
+      multi_json (>= 1.11.0)
+
+GIT
   remote: https://github.com/joliss/jquery-ui-rails
   revision: de88822408371b678f346338d18f9f4eb7635456
   specs:
@@ -491,6 +499,7 @@ DEPENDENCIES
   faker
   figaro
   friendly_id
+  gibbon!
   gmaps4rails
   google-webfonts-rails (~> 0.0.4)
   guard-rspec

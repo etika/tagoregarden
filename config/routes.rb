@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
 
  Blogo::Routes.mount_to(self, at: '/blog')
+ get 'emailapi/index' => 'emailapi#index'
+ post 'emailapi/subscribe' => 'emailapi#subscribe'
 
   post 'reviews/create'
   get 'reviews/show'
