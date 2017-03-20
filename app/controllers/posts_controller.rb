@@ -7,12 +7,13 @@ class PostsController < ApplicationController
   def show
   end
   def new
-    @post = Post.new
+    @post =  current_user.posts.build
+    # Post.new
 
   end
 
   def create
-    @post = Post.new( post_params)
+    @post = current_user.posts.build( post_params)
     if @post.save
       redirect_to @post
     else
