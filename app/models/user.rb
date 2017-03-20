@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   validates_presence_of :email
   has_many :posts
+  has_many :comments
  attr_accessor :full_name
 
   # Getter

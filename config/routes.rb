@@ -22,7 +22,9 @@ Rails.application.routes.draw do
   get 'coming-soon'=>'home#coming_soon'
   get 'about-us'=>'home#about_us'
   get 'search'=>'home#search'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   # get 'contact-us'=>'home#contact_us'
   get 'faq'=>'home#faq'
   get 'map-display'=>'home#map_display'
@@ -30,6 +32,7 @@ Rails.application.routes.draw do
   resources :updates do
     get :autocomplete_tag_name, :on => :collection
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
