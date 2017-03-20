@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
   # def current_user
   #     @current_user ||= User.find(session[:user_id])
   #   end
@@ -23,4 +24,13 @@ class ApplicationController < ActionController::Base
       new_entry_path
     end
   end
+ protected
+  def authenticate_user!
+    if user_signed_in?
+      super
+    else
+      redirect_to root_path, :notice => 'if you want to add a notice'
+    end
+  end
+
 end
