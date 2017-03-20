@@ -1,0 +1,4 @@
+<%=comment.comment%>
+<%= comment.user.email%>
+<%= link_to "Delete Reply" ,[comment.post,comment], method:  :delete, data : { "Are you sure?"}%>
+<%= link_to "Edit Reply" ,edit_post_commemt(comment.post,comment)%>
