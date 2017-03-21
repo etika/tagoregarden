@@ -22,9 +22,6 @@ Rails.application.routes.draw do
   get 'coming-soon'=>'home#coming_soon'
   get 'about-us'=>'home#about_us'
   get 'search'=>'home#search'
-  resources :posts do
-    resources :comments
-  end
   resources :forum_posts do
     resources :comments
   end
