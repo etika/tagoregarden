@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<h2>
+  <%= @forum_post.title %>
+</h2>
+<h4>
+  <%= @forum_post.content %>
+</h4>
+Total Number of Comments <%= @forum_post.comments.count %></br>
+ <%= render @forum_post.comments%></br>
+ Reply to thread</br>
+ <%= render "comments/form"%>
+<%= link_to 'Edit', edit_forum_post_path(@forum_post) %> |
+<%= link_to 'Back', forum_posts_path %>

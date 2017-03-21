@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320091822) do
+ActiveRecord::Schema.define(version: 20170321052417) do
 
   create_table "blogo_posts", force: :cascade do |t|
     t.integer  "user_id",          null: false
@@ -86,8 +86,9 @@ ActiveRecord::Schema.define(version: 20170320091822) do
     t.text     "comment"
     t.integer  "post_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "forum_post_id"
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
@@ -113,6 +114,16 @@ ActiveRecord::Schema.define(version: 20170320091822) do
     t.boolean  "paid_home_delivery",   default: false
     t.text     "terms_and_conditions"
   end
+
+  create_table "forum_posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "forum_posts", ["user_id"], name: "index_forum_posts_on_user_id"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 191, null: false

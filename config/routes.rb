@@ -25,10 +25,15 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  resources :forum_posts do
+    resources :comments
+  end
+  match 'forum' ,to: 'forum_posts#index', via: [:get]
+
+  # get "/forum_posts", to: "forum_posts#index", as: "forum"
   # get 'contact-us'=>'home#contact_us'
   get 'faq'=>'home#faq'
   get 'map-display'=>'home#map_display'
-  mount Thredded::Engine => '/forum'
   resources :updates do
     get :autocomplete_tag_name, :on => :collection
   end
