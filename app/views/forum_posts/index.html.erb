@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<center><h1> Forum</h1> </center>
+    <% @forum_posts.each do |post| %>
+      
+       <h1> <%= link_to  post.title,post %></h1>
+        <h3><%= post.content %></h3>
+         <%= time_ago_in_words(post.created_at)%> ago by <%= post.user.email%>
+        <%#= link_to 'Show', post %>
+        <%#= link_to 'Edit', edit_post_path(post) %>
+        <%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+    <% end %>
+
+
+</br>
+<% if user_signed_in?%>
+<%= link_to 'New Post', new_forum_post_path %>
+<%end%>

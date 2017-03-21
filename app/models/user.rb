@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable
   has_and_belongs_to_many :roles
   validates_presence_of :email
+  has_many :forum_posts
+  has_many :comments
  attr_accessor :full_name
 
   # Getter

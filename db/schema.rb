@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205163651) do
+ActiveRecord::Schema.define(version: 20170321052417) do
 
   create_table "blogo_posts", force: :cascade do |t|
     t.integer  "user_id",          null: false
@@ -82,6 +82,18 @@ ActiveRecord::Schema.define(version: 20161205163651) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
+  create_table "comments", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "post_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "forum_post_id"
+  end
+
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
   create_table "entries", force: :cascade do |t|
     t.string   "latitude"
     t.string   "longitude"
@@ -103,6 +115,16 @@ ActiveRecord::Schema.define(version: 20161205163651) do
     t.text     "terms_and_conditions"
   end
 
+  create_table "forum_posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "forum_posts", ["user_id"], name: "index_forum_posts_on_user_id"
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 191, null: false
     t.integer  "sluggable_id",               null: false
@@ -115,6 +137,14 @@ ActiveRecord::Schema.define(version: 20161205163651) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "name"

@@ -22,13 +22,22 @@ Rails.application.routes.draw do
   get 'coming-soon'=>'home#coming_soon'
   get 'about-us'=>'home#about_us'
   get 'search'=>'home#search'
+  resources :posts do
+    resources :comments
+  end
+  resources :forum_posts do
+    resources :comments
+  end
+  match 'forum' ,to: 'forum_posts#index', via: [:get]
+
+  # get "/forum_posts", to: "forum_posts#index", as: "forum"
   # get 'contact-us'=>'home#contact_us'
   get 'faq'=>'home#faq'
   get 'map-display'=>'home#map_display'
-  mount Thredded::Engine => '/forum'
   resources :updates do
     get :autocomplete_tag_name, :on => :collection
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
