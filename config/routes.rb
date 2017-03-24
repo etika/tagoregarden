@@ -46,6 +46,7 @@ Rails.application.routes.draw do
 # get 'users/auth/:provider/callback', to: 'sessions#create'
   resources :products
   resource :shopping_cart
+  post 'verify_token' =>'home#verify_token'
 
 
 

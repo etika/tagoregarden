@@ -53,4 +53,18 @@ class HomeController < ApplicationController
     end
     @json_map.to_json
   end
+  def verify_token
+    respond_to do |format|
+    if current_user.activation_token.eql?(params[:activation_token])
+      current_user.update_attributes(:phone_verified=>true)
+      @verified=true
+      $facebook_sign_in=false
+     else
+      @verified=false
+    end
+    format.html
+    format.js
+
+  end
+end
 end

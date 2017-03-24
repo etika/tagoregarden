@@ -11,53 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321052417) do
 
-  create_table "blogo_posts", force: :cascade do |t|
-    t.integer  "user_id",          null: false
-    t.string   "permalink",        null: false
-    t.string   "title",            null: false
-    t.boolean  "published",        null: false
-    t.datetime "published_at",     null: false
-    t.string   "markup_lang",      null: false
-    t.text     "raw_content",      null: false
-    t.text     "html_content",     null: false
-    t.text     "html_overview"
-    t.string   "tags_string"
-    t.string   "meta_description", null: false
-    t.string   "meta_image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "blogo_posts", ["permalink"], name: "index_blogo_posts_on_permalink", unique: true
-  add_index "blogo_posts", ["published_at"], name: "index_blogo_posts_on_published_at"
-  add_index "blogo_posts", ["user_id"], name: "index_blogo_posts_on_user_id"
-
-  create_table "blogo_taggings", force: :cascade do |t|
-    t.integer "post_id", null: false
-    t.integer "tag_id",  null: false
-  end
-
-  add_index "blogo_taggings", ["tag_id", "post_id"], name: "index_blogo_taggings_on_tag_id_and_post_id", unique: true
-
-  create_table "blogo_tags", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "blogo_tags", ["name"], name: "index_blogo_tags_on_name", unique: true
-
-  create_table "blogo_users", force: :cascade do |t|
-    t.string   "name",            null: false
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "blogo_users", ["email"], name: "index_blogo_users_on_email", unique: true
+ActiveRecord::Schema.define(version: 20170323165427) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "category_name"
@@ -486,21 +441,21 @@ ActiveRecord::Schema.define(version: 20170321052417) do
   add_index "updates", ["slug"], name: "index_updates_on_slug"
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "address"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "provider"
     t.string   "uid"
     t.string   "phone_number"
@@ -508,6 +463,12 @@ ActiveRecord::Schema.define(version: 20170321052417) do
     t.string   "pay_provider"
     t.string   "pay_uid"
     t.string   "access_code"
+    t.string   "activation_token"
+    t.boolean  "phone_verified",         default: false
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -67,3 +67,15 @@ input[type=text]:focus {
     });
 </script>
 
+<%if user_signed_in? && current_user.phone_verified == false%>
+ <script type="text/javascript">
+
+    $(document).ready(function(){
+    $("#myModal1").modal({show:true,
+      keyboard:false,
+      backdrop: 'static'});
+
+    });
+  </script>
+  <%end%>
+     <%=render :partial=>"/shared/phone_verification" %>

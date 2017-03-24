@@ -1,0 +1,9 @@
+
+<%if @verified==true %>
+  $(window.location.replace("/home"))
+  $(".modal").close();
+<%else%>
+$(".modal #err").empty();
+$(".modal #err").html("Activation Token is Invalid")
+$(".modal #err").addClass("alert alert-danger")
+<%end%>
