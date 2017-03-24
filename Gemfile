@@ -1,4 +1,3 @@
-
 source 'https://rubygems.org'
 
 
@@ -45,6 +44,9 @@ gem 'thredded', '~> 0.6.1'
 gem 'aws-sdk', '~> 2.3'
 gem 'cowsay'
 gem 'blogo'
+# gem 'gibbon'
+gem 'gibbon', :git => 'https://github.com/amro/gibbon.git'
+
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
 gem 'social-share-button'
@@ -61,7 +63,6 @@ gem 'omniauth-stripe-connect'
 gem 'rack-mini-profiler'
 gem 'rapidfire'
 gem 'twilio-ruby'
-gem 'mailcatcher'
 group :assets do
   gem 'jquery-ui-rails', :git => 'https://github.com/joliss/jquery-ui-rails'
 end
