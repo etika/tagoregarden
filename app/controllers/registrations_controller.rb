@@ -39,7 +39,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
   protected
   def permitted_user
-    params.require(:user).permit(:email,:role_ids,:phone_number,:full_name,:address,:password,:password_confirmation,roles: [],:activation_token)
+    params.require(:user).permit(:email,:activation_token,:role_ids,:phone_number,:full_name,:address,:password,:password_confirmation,roles: [])
   end
   def fb_permitted_user
     params.require(:user).permit(:email,:role_ids,:uid,:provider)
