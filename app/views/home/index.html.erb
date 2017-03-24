@@ -30,3 +30,15 @@ input[type=text]:focus {
 </div>
  <%#= google_adsense_include_tag client: 'ca-pub-2314450325724265', slot: '6642889430'%>
 
+<%if user_signed_in? && current_user.phone_verified == false%>
+ <script type="text/javascript">
+
+    $(document).ready(function(){
+    $("#myModal1").modal({show:true,
+      keyboard:false,
+      backdrop: 'static'});
+
+    });
+  </script>
+  <%end%>
+     <%=render :partial=>"/shared/phone_verification" %>

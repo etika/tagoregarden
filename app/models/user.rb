@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :reviews
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,:omniauthable
+         :recoverable, :rememberable, :trackable, :validatable,:omniauthable, :confirmable
   has_and_belongs_to_many :roles
   validates_presence_of :email
  attr_accessor :full_name
