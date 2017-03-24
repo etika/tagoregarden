@@ -44,6 +44,7 @@ gem 'rails4-autocomplete'
 gem 'thredded', '~> 0.6.1'
 gem 'aws-sdk', '~> 2.3'
 gem 'cowsay'
+gem 'blogo'
 # gem 'metrical', :require => false
 # gem "simplecov",'~>0.9.11' ,:require => false, :group => :test
 gem 'social-share-button'
