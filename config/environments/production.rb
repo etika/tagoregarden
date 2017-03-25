@@ -78,7 +78,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-   config.action_mailer.default_url_options = { :host => 'tagoregardenwala.com'}
+   config.action_mailer.default_url_options = { :host => 'www.tagoregardenwala.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
