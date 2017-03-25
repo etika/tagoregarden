@@ -78,7 +78,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-   config.action_mailer.default_url_options = { :host => 'www.tagoregardenwala.com'}
+   config.action_mailer.default_url_options = { :host => 'http://www.tagoregardenwala.co.in'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
@@ -95,6 +95,9 @@ Rails.application.configure do
     enable_starttls_auto: true,
     openssl_verify_mode: 'none' 
   }
+
+config.action_mailer.asset_host = 'http://www.tagoregardenwala.co.in'
+
   config.action_mailer.raise_delivery_errors = true
   config.paperclip_defaults = {
   storage: :s3,
